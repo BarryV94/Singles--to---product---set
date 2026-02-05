@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import fetch from "node-fetch";
 
 const BASE_PATH = path.resolve("baza.json");
 const OUTPUT_PATH = path.resolve("western.json");
@@ -10,6 +9,28 @@ const RATE_LIMIT_DELAY = 120; // ms – bezpieczne dla GH Actions
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * Ensure fetch exists: use global fetch (Node 18+) or try to load undici.
+ * Jeśli nic nie zadziała — czytelny komunikat i exit(1).
+ */
+if (typeof fetch === "undefined") {
+  try {
+    // top-level await is allowed in ESM; spróbuj załadować undici jeśli jest zainstalowane
+    const { fetch: undiciFetch } = await import("undici");
+    if (typeof undiciFetch === "function") {
+      globalThis.fetch = undiciFetch;
+    } else {
+      console.error('Brak globalnego fetch i "undici" nie dostarczył funkcji fetch.');
+      console.error('Zainstaluj undici: npm install undici');
+      process.exit(1);
+    }
+  } catch (e) {
+    console.error("Brak globalnego fetch i nie udało się zaimportować 'undici'.");
+    console.error("Jeśli używasz starszej wersji Node, zainstaluj undici (`npm i undici`) lub uruchom na Node 18+.");
+    process.exit(1);
+  }
 }
 
 /**
