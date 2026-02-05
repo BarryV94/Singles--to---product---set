@@ -1,44 +1,45 @@
 name: Generate western_sets.json
 
-
 on:
-workflow_dispatch: {}
-push:
-branches:
-- main
-
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
 
 jobs:
-build:
-runs-on: ubuntu-latest
+  generate:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-steps:
-- name: Check out repo
-uses: actions/checkout@v4
-with:
-persist-credentials: true
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
+      - name: Install dependencies (none required)
+        run: echo "No npm install required (script uses native fetch)."
 
-- name: Setup Node.js
-uses: actions/setup-node@v4
-with:
-node-version: '20'
+      - name: Run generator script
+        run: |
+          node ./scripts/generate_western_sets.js
 
-
-- name: Run generator script
-run: |
-node ./scripts/generate_western_sets.js
-
-
-- name: Commit generated file (if changed)
-run: |
-git config user.name "github-actions[bot]"
-git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-git add Singles--to---product---set/western_sets.json || true
-if ! git diff --staged --quiet; then
-git commit -m "chore: regenerate western_sets.json (TCGdex)"
-git push
-else
-echo "No changes to commit"
-fi
+      - name: Commit generated files if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/expansion-mapping.suggestions.json || true
+          # add any generated western_sets.json files (search)
+          git add $(git ls-files --others --exclude-standard -om | grep -E 'western_sets\.json$' || true) || true
+          # also add any existing but changed generated files in repo
+          git add -A PKMNTCGSets-main/western_sets.json PKMNTCGSets-main/*.json || true
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: regenerate western_sets.json (TCGdex suggestions + mapping)"
+            git push
+          else
+            echo "No changes to commit."
+          fi
