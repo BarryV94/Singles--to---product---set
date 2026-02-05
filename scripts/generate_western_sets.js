@@ -155,7 +155,7 @@ async function searchCardsByName(name){
 
   // iterate expansions
   for(const [idExp, items] of byExpansion.entries()){
-    // try to get tcgdexSetId from mapping if present
+    // try to get tcgdexSetId from mapping if present 
     const map = mapping[idExp] || {};
     const tcgdexSetId = map.tcgdexId || null;
 
