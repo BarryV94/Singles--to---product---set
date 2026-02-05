@@ -35,7 +35,7 @@ node ./scripts/generate_western_sets.js
 run: |
 git config user.name "github-actions[bot]"
 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-git add PKMNTCGSets-main/western_sets.json || true
+git add Singles--to---product---set/western_sets.json || true
 if ! git diff --staged --quiet; then
 git commit -m "chore: regenerate western_sets.json (TCGdex)"
 git push
