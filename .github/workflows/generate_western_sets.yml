@@ -21,9 +21,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies (none required)
-        run: echo "No npm install required (script uses native fetch)."
-
       - name: Run generator script
         run: |
           node ./scripts/generate_western_sets.js
@@ -32,11 +29,20 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Add suggestions/mapping files if created
           git add .github/expansion-mapping.suggestions.json || true
-          # add any generated western_sets.json files (search)
+          git add .github/expansion-mapping.sample.json || true
+
+          # Add western_sets.json in repo root (if created)
+          git add western_sets.json || true
+
+          # Add any other western_sets.json files found anywhere in the repo (created next to products file)
           git add $(git ls-files --others --exclude-standard -om | grep -E 'western_sets\.json$' || true) || true
-          # also add any existing but changed generated files in repo
-          git add -A PKMNTCGSets-main/western_sets.json PKMNTCGSets-main/*.json || true
+
+          # Stage any existing changed generated files that match common names (safe no-op if not present)
+          git add ./western_sets.json ./Singles--to---product---set/western_sets.json || true
+
           if ! git diff --staged --quiet; then
             git commit -m "chore: regenerate western_sets.json (TCGdex suggestions + mapping)"
             git push
