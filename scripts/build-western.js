@@ -1,36 +1,21 @@
-import fs from "fs";
-import path from "path";
+const fs = require('fs');
+const path = require('path');
 
 const BASE_PATH = path.resolve("baza.json");
 const OUTPUT_PATH = path.resolve("western.json");
 
 const BASE_URL = "https://api.tcgdex.net/v2/en/cards";
 const RATE_LIMIT_DELAY = 120; // ms – bezpieczne dla GH Actions
+const MAX_FILES_PER_SUBFOLDER = 999;
+const ROOT_EN_DIR = path.resolve("EN");
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-/**
- * Ensure fetch exists: use global fetch (Node 18+) or try to load undici.
- * Jeśli nic nie zadziała — czytelny komunikat i exit(1).
- */
 if (typeof fetch === "undefined") {
-  try {
-    // top-level await is allowed in ESM; spróbuj załadować undici jeśli jest zainstalowane
-    const { fetch: undiciFetch } = await import("undici");
-    if (typeof undiciFetch === "function") {
-      globalThis.fetch = undiciFetch;
-    } else {
-      console.error('Brak globalnego fetch i "undici" nie dostarczył funkcji fetch.');
-      console.error('Zainstaluj undici: npm install undici');
-      process.exit(1);
-    }
-  } catch (e) {
-    console.error("Brak globalnego fetch i nie udało się zaimportować 'undici'.");
-    console.error("Jeśli używasz starszej wersji Node, zainstaluj undici (`npm i undici`) lub uruchom na Node 18+.");
-    process.exit(1);
-  }
+  console.error("Global fetch nie jest dostępny. Uruchom na Node >= 18 (Node 20 w CI ma fetch).");
+  process.exit(1);
 }
 
 /**
@@ -136,38 +121,106 @@ async function fetchCardDetails(cardId) {
   return null;
 }
 
-async function main() {
-  console.log("📦 Loading baza.json...");
-  const baseCards = JSON.parse(fs.readFileSync(BASE_PATH, "utf8"));
+/**
+ * Zapisuje plik do struktury EN/<n>/western_DD_MM_YYYY.json.
+ * Tworzy katalog EN oraz podfoldery numerowane automatycznie.
+ */
+function saveDatedWesternFile(content) {
+  // ensure EN root exists
+  fs.mkdirSync(ROOT_EN_DIR, { recursive: true });
 
-  console.log(`🔧 Building western.json from ${baseCards.length} cards...`);
+  // find first folder index with < MAX_FILES_PER_SUBFOLDER files, or create new
+  let idx = 1;
+  let targetFolder = null;
 
-  const western = [];
-
-  for (let i = 0; i < baseCards.length; i++) {
-    const base = baseCards[i];
-
-    const fallback = buildFallbackCard(base);
-    const details = await fetchCardDetails(base.id);
-
-    const finalCard = details
-      ? deepMerge(fallback, details)
-      : fallback;
-
-    western.push(finalCard);
-
-    if (i % 500 === 0 && i !== 0) {
-      console.log(`✔ processed ${i}/${baseCards.length}`);
+  while (true) {
+    const folderPath = path.join(ROOT_EN_DIR, String(idx));
+    if (!fs.existsSync(folderPath)) {
+      fs.mkdirSync(folderPath, { recursive: true });
+      targetFolder = folderPath;
+      break;
     }
 
-    await sleep(RATE_LIMIT_DELAY);
+    // count files (not directories) in folder
+    const entries = fs.readdirSync(folderPath);
+    let fileCount = 0;
+    for (const e of entries) {
+      try {
+        const st = fs.statSync(path.join(folderPath, e));
+        if (st.isFile()) fileCount++;
+      } catch (err) {
+        // ignore transient errors
+      }
+    }
+
+    if (fileCount < MAX_FILES_PER_SUBFOLDER) {
+      targetFolder = folderPath;
+      break; // use this folder
+    }
+
+    idx++;
   }
 
-  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(western, null, 2));
-  console.log(`✅ DONE – saved ${western.length} cards to western.json`);
+  // get date in Europe/Warsaw in format DD_MM_YYYY
+  const now = new Date();
+  const dateStrDots = new Intl.DateTimeFormat("pl-PL", {
+    timeZone: "Europe/Warsaw",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  }).format(now); // e.g., "05.02.2026"
+  const dateStr = dateStrDots.replace(/\./g, "_"); // "05_02_2026"
+
+  const fileName = `western_${dateStr}.json`;
+  const filePath = path.join(targetFolder, fileName);
+
+  // write (overwrites if already exists)
+  fs.writeFileSync(filePath, JSON.stringify(content, null, 2));
+  console.log(`✅ Saved dated western file: ${filePath}`);
 }
 
-main().catch(err => {
-  console.error("💥 Fatal error:", err);
-  process.exit(1);
-});
+async function main() {
+  try {
+    console.log("📦 Loading baza.json...");
+    const baseCards = JSON.parse(fs.readFileSync(BASE_PATH, "utf8"));
+
+    console.log(`🔧 Building western.json from ${baseCards.length} cards...`);
+
+    const western = [];
+
+    for (let i = 0; i < baseCards.length; i++) {
+      const base = baseCards[i];
+
+      const fallback = buildFallbackCard(base);
+      const details = await fetchCardDetails(base.id);
+
+      const finalCard = details
+        ? deepMerge(fallback, details)
+        : fallback;
+
+      western.push(finalCard);
+
+      if (i % 500 === 0 && i !== 0) {
+        console.log(`✔ processed ${i}/${baseCards.length}`);
+      }
+
+      await sleep(RATE_LIMIT_DELAY);
+    }
+
+    // Save the canonical western.json in repo root (backwards compatibility)
+    fs.writeFileSync(OUTPUT_PATH, JSON.stringify(western, null, 2));
+    console.log(`✅ DONE – saved ${western.length} cards to ${OUTPUT_PATH}`);
+
+    // Also save dated file inside EN/<n>/western_DD_MM_YYYY.json
+    try {
+      saveDatedWesternFile(western);
+    } catch (err) {
+      console.error("⚠️ Failed to save dated EN file:", err);
+    }
+  } catch (err) {
+    console.error("💥 Fatal error:", err);
+    process.exit(1);
+  }
+}
+
+main();
