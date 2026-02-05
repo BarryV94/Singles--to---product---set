@@ -1,0 +1,6927 @@
+{
+  "version": 2,
+  "generatedAt": "2026-02-05T12:01:26.708Z",
+  "description": "Automated generation (with fuzzy matching) - review .github/expansion-mapping.suggestions.json to improve matches.",
+  "sets": [
+    {
+      "idExpansion": "1585",
+      "name": "Expansion 1585",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 176,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1523",
+      "name": "Expansion 1523",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 211,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1525",
+      "name": "Expansion 1525",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 66,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1526",
+      "name": "Expansion 1526",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 63,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1527",
+      "name": "Expansion 1527",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 130,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1528",
+      "name": "Expansion 1528",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 84,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1529",
+      "name": "Expansion 1529",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 133,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1530",
+      "name": "Expansion 1530",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 132,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1531",
+      "name": "Expansion 1531",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 114,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1532",
+      "name": "Expansion 1532",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 75,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1533",
+      "name": "Expansion 1533",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 66,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1534",
+      "name": "Expansion 1534",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 113,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1535",
+      "name": "Expansion 1535",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 115,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1536",
+      "name": "Expansion 1536",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 169,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1537",
+      "name": "Expansion 1537",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 190,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1538",
+      "name": "Expansion 1538",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 186,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2107",
+      "name": "Expansion 2107",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 81,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1605",
+      "name": "Expansion 1605",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 25,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1607",
+      "name": "Expansion 1607",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 55,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1608",
+      "name": "Expansion 1608",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 46,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1609",
+      "name": "Expansion 1609",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 62,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1606",
+      "name": "Expansion 1606",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 7,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1610",
+      "name": "Expansion 1610",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 25,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1622",
+      "name": "Expansion 1622",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1633",
+      "name": "Expansion 1633",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1539",
+      "name": "Expansion 1539",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 116,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1626",
+      "name": "Expansion 1626",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1540",
+      "name": "Expansion 1540",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 102,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1541",
+      "name": "Expansion 1541",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 105,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1542",
+      "name": "Expansion 1542",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 97,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1543",
+      "name": "Expansion 1543",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 106,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1544",
+      "name": "Expansion 1544",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 116,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1545",
+      "name": "Expansion 1545",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 111,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1546",
+      "name": "Expansion 1546",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 109,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1547",
+      "name": "Expansion 1547",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 111,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1548",
+      "name": "Expansion 1548",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 145,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1549",
+      "name": "Expansion 1549",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 114,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1550",
+      "name": "Expansion 1550",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 95,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1551",
+      "name": "Expansion 1551",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 111,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1552",
+      "name": "Expansion 1552",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 103,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1627",
+      "name": "Expansion 1627",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1553",
+      "name": "Expansion 1553",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 101,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1554",
+      "name": "Expansion 1554",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 108,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1613",
+      "name": "Expansion 1613",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 17,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1614",
+      "name": "Expansion 1614",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 17,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1615",
+      "name": "Expansion 1615",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 17,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1616",
+      "name": "Expansion 1616",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 17,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1617",
+      "name": "Expansion 1617",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 17,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1555",
+      "name": "Expansion 1555",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 137,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1556",
+      "name": "Expansion 1556",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 124,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1557",
+      "name": "Expansion 1557",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 133,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1618",
+      "name": "Expansion 1618",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1558",
+      "name": "Expansion 1558",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 108,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1628",
+      "name": "Expansion 1628",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 23,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1619",
+      "name": "Expansion 1619",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 17,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1559",
+      "name": "Expansion 1559",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 102,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1560",
+      "name": "Expansion 1560",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 152,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1561",
+      "name": "Expansion 1561",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 106,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1620",
+      "name": "Expansion 1620",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 17,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1562",
+      "name": "Expansion 1562",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 137,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1621",
+      "name": "Expansion 1621",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1563",
+      "name": "Expansion 1563",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 127,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1564",
+      "name": "Expansion 1564",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 165,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1634",
+      "name": "Expansion 1634",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1565",
+      "name": "Expansion 1565",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 113,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1566",
+      "name": "Expansion 1566",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 140,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1629",
+      "name": "Expansion 1629",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 60,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1567",
+      "name": "Expansion 1567",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 105,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1568",
+      "name": "Expansion 1568",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 96,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1569",
+      "name": "Expansion 1569",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 110,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1570",
+      "name": "Expansion 1570",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 114,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1571",
+      "name": "Expansion 1571",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 144,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1611",
+      "name": "Expansion 1611",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 106,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1645",
+      "name": "Expansion 1645",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 443,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1572",
+      "name": "Expansion 1572",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 104,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1630",
+      "name": "Expansion 1630",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 61,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1573",
+      "name": "Expansion 1573",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 113,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1574",
+      "name": "Expansion 1574",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 107,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1575",
+      "name": "Expansion 1575",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 126,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1576",
+      "name": "Expansion 1576",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 133,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1577",
+      "name": "Expansion 1577",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 162,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1578",
+      "name": "Expansion 1578",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 144,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1579",
+      "name": "Expansion 1579",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 131,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1636",
+      "name": "Expansion 1636",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1580",
+      "name": "Expansion 1580",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 109,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1581",
+      "name": "Expansion 1581",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 146,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1637",
+      "name": "Expansion 1637",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 45,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1612",
+      "name": "Expansion 1612",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 273,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1582",
+      "name": "Expansion 1582",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 168,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1583",
+      "name": "Expansion 1583",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 126,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1631",
+      "name": "Expansion 1631",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 61,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1625",
+      "name": "Expansion 1625",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1584",
+      "name": "Expansion 1584",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 129,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1624",
+      "name": "Expansion 1624",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1623",
+      "name": "Expansion 1623",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1521",
+      "name": "Expansion 1521",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 151,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1632",
+      "name": "Expansion 1632",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 61,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1648",
+      "name": "Expansion 1648",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 34,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1649",
+      "name": "Expansion 1649",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 127,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1660",
+      "name": "Expansion 1660",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 132,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1678",
+      "name": "Expansion 1678",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 215,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1683",
+      "name": "Expansion 1683",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 61,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1687",
+      "name": "Expansion 1687",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 174,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1693",
+      "name": "Expansion 1693",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 136,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1706",
+      "name": "Expansion 1706",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 162,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1707",
+      "name": "Expansion 1707",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 61,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1716",
+      "name": "Expansion 1716",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 143,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1741",
+      "name": "Expansion 1741",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1742",
+      "name": "Expansion 1742",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 130,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1745",
+      "name": "Expansion 1745",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 232,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1752",
+      "name": "Expansion 1752",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1757",
+      "name": "Expansion 1757",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 313,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1800",
+      "name": "Expansion 1800",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 241,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1758",
+      "name": "Expansion 1758",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 62,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1824",
+      "name": "Expansion 1824",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 222,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1842",
+      "name": "Expansion 1842",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 91,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1843",
+      "name": "Expansion 1843",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 148,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "1845",
+      "name": "Expansion 1845",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2065",
+      "name": "Expansion 2065",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 213,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2075",
+      "name": "Expansion 2075",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 183,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2070",
+      "name": "Expansion 2070",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 61,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2320",
+      "name": "Expansion 2320",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 218,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2351",
+      "name": "Expansion 2351",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 92,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2352",
+      "name": "Expansion 2352",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2361",
+      "name": "Expansion 2361",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 40,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2370",
+      "name": "Expansion 2370",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 275,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2404",
+      "name": "Expansion 2404",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2407",
+      "name": "Expansion 2407",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 227,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2438",
+      "name": "Expansion 2438",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 27,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2437",
+      "name": "Expansion 2437",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 266,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2487",
+      "name": "Expansion 2487",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 293,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2514",
+      "name": "Expansion 2514",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 186,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2644",
+      "name": "Expansion 2644",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 285,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2829",
+      "name": "Expansion 2829",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2916",
+      "name": "Expansion 2916",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 385,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "2921",
+      "name": "Expansion 2921",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 255,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3108",
+      "name": "Expansion 3108",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 61,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3143",
+      "name": "Expansion 3143",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 230,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3214",
+      "name": "Expansion 3214",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 354,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3219",
+      "name": "Expansion 3219",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 86,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3279",
+      "name": "Expansion 3279",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 115,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3284",
+      "name": "Expansion 3284",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 86,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3289",
+      "name": "Expansion 3289",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 75,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3294",
+      "name": "Expansion 3294",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 75,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3324",
+      "name": "Expansion 3324",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 422,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3354",
+      "name": "Expansion 3354",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 80,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3384",
+      "name": "Expansion 3384",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 94,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3274",
+      "name": "Expansion 3274",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 119,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3389",
+      "name": "Expansion 3389",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 127,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3199",
+      "name": "Expansion 3199",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 226,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3479",
+      "name": "Expansion 3479",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 121,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3419",
+      "name": "Expansion 3419",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 102,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3510",
+      "name": "Expansion 3510",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 5,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3484",
+      "name": "Expansion 3484",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 219,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3580",
+      "name": "Expansion 3580",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 330,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3585",
+      "name": "Expansion 3585",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 21,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3590",
+      "name": "Expansion 3590",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3595",
+      "name": "Expansion 3595",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 61,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3600",
+      "name": "Expansion 3600",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 117,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3605",
+      "name": "Expansion 3605",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 7,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3610",
+      "name": "Expansion 3610",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 8,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3615",
+      "name": "Expansion 3615",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3675",
+      "name": "Expansion 3675",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 205,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3712",
+      "name": "Expansion 3712",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 91,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3697",
+      "name": "Expansion 3697",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 91,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3717",
+      "name": "Expansion 3717",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 33,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3738",
+      "name": "Expansion 3738",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 50,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3630",
+      "name": "Expansion 3630",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 208,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3751",
+      "name": "Expansion 3751",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 96,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3776",
+      "name": "Expansion 3776",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 235,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3781",
+      "name": "Expansion 3781",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 125,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6200",
+      "name": "Expansion 6200",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 137,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3856",
+      "name": "Expansion 3856",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 250,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4159",
+      "name": "Expansion 4159",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 404,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4168",
+      "name": "Expansion 4168",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 151,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3801",
+      "name": "Expansion 3801",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 117,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3806",
+      "name": "Expansion 3806",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 75,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3811",
+      "name": "Expansion 3811",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 80,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3816",
+      "name": "Expansion 3816",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 115,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3826",
+      "name": "Expansion 3826",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 25,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3821",
+      "name": "Expansion 3821",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 69,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3831",
+      "name": "Expansion 3831",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 69,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3836",
+      "name": "Expansion 3836",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 116,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4169",
+      "name": "Expansion 4169",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 102,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4170",
+      "name": "Expansion 4170",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 202,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4173",
+      "name": "Expansion 4173",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 6,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4174",
+      "name": "Expansion 4174",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 255,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3841",
+      "name": "Expansion 3841",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 69,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3846",
+      "name": "Expansion 3846",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 70,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3851",
+      "name": "Expansion 3851",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 118,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3861",
+      "name": "Expansion 3861",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 65,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3866",
+      "name": "Expansion 3866",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 111,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3871",
+      "name": "Expansion 3871",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 63,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3876",
+      "name": "Expansion 3876",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 73,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3881",
+      "name": "Expansion 3881",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 112,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3886",
+      "name": "Expansion 3886",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 86,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3891",
+      "name": "Expansion 3891",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 66,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3896",
+      "name": "Expansion 3896",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 110,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3901",
+      "name": "Expansion 3901",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 63,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3906",
+      "name": "Expansion 3906",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 78,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3911",
+      "name": "Expansion 3911",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 78,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3916",
+      "name": "Expansion 3916",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 125,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3931",
+      "name": "Expansion 3931",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 82,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3921",
+      "name": "Expansion 3921",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 62,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3926",
+      "name": "Expansion 3926",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 62,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4069",
+      "name": "Expansion 4069",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 38,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4171",
+      "name": "Expansion 4171",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 95,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4172",
+      "name": "Expansion 4172",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 95,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3936",
+      "name": "Expansion 3936",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 64,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3941",
+      "name": "Expansion 3941",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 64,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3946",
+      "name": "Expansion 3946",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 70,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3974",
+      "name": "Expansion 3974",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 32,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3951",
+      "name": "Expansion 3951",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 62,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3956",
+      "name": "Expansion 3956",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 62,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3961",
+      "name": "Expansion 3961",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 73,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3966",
+      "name": "Expansion 3966",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 73,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3971",
+      "name": "Expansion 3971",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 73,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3979",
+      "name": "Expansion 3979",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 4,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3984",
+      "name": "Expansion 3984",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 188,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4178",
+      "name": "Expansion 4178",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4218",
+      "name": "Expansion 4218",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 248,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3989",
+      "name": "Expansion 3989",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 103,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3994",
+      "name": "Expansion 3994",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 59,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "3999",
+      "name": "Expansion 3999",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 59,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4074",
+      "name": "Expansion 4074",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 140,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4079",
+      "name": "Expansion 4079",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 27,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4084",
+      "name": "Expansion 4084",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4004",
+      "name": "Expansion 4004",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 88,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4089",
+      "name": "Expansion 4089",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 84,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4094",
+      "name": "Expansion 4094",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 32,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4009",
+      "name": "Expansion 4009",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 89,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4099",
+      "name": "Expansion 4099",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 17,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4104",
+      "name": "Expansion 4104",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 10,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4109",
+      "name": "Expansion 4109",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 10,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4014",
+      "name": "Expansion 4014",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 65,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4019",
+      "name": "Expansion 4019",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 65,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4238",
+      "name": "Expansion 4238",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 32,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4114",
+      "name": "Expansion 4114",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 27,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4024",
+      "name": "Expansion 4024",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 97,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4029",
+      "name": "Expansion 4029",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 91,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4119",
+      "name": "Expansion 4119",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4124",
+      "name": "Expansion 4124",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 34,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4034",
+      "name": "Expansion 4034",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 80,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4039",
+      "name": "Expansion 4039",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 80,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4129",
+      "name": "Expansion 4129",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 25,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4134",
+      "name": "Expansion 4134",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4044",
+      "name": "Expansion 4044",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 97,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4049",
+      "name": "Expansion 4049",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 105,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4240",
+      "name": "Expansion 4240",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 8,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4243",
+      "name": "Expansion 4243",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 78,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4241",
+      "name": "Expansion 4241",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 21,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4242",
+      "name": "Expansion 4242",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4139",
+      "name": "Expansion 4139",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 23,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4054",
+      "name": "Expansion 4054",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 90,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4144",
+      "name": "Expansion 4144",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4149",
+      "name": "Expansion 4149",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4059",
+      "name": "Expansion 4059",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 63,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4064",
+      "name": "Expansion 4064",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 64,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4154",
+      "name": "Expansion 4154",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 51,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4245",
+      "name": "Expansion 4245",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 31,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4246",
+      "name": "Expansion 4246",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 51,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4247",
+      "name": "Expansion 4247",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 29,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4248",
+      "name": "Expansion 4248",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 31,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4249",
+      "name": "Expansion 4249",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 35,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4250",
+      "name": "Expansion 4250",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 38,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4251",
+      "name": "Expansion 4251",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 131,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4252",
+      "name": "Expansion 4252",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 41,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4253",
+      "name": "Expansion 4253",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4254",
+      "name": "Expansion 4254",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 21,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4255",
+      "name": "Expansion 4255",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 21,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4256",
+      "name": "Expansion 4256",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 13,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4257",
+      "name": "Expansion 4257",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4258",
+      "name": "Expansion 4258",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 59,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4239",
+      "name": "Expansion 4239",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 101,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4274",
+      "name": "Expansion 4274",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 82,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4276",
+      "name": "Expansion 4276",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 22,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4298",
+      "name": "Expansion 4298",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 51,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4321",
+      "name": "Expansion 4321",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 7,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4299",
+      "name": "Expansion 4299",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 9,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4310",
+      "name": "Expansion 4310",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 11,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4322",
+      "name": "Expansion 4322",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 127,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4179",
+      "name": "Expansion 4179",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 34,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4180",
+      "name": "Expansion 4180",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 99,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4181",
+      "name": "Expansion 4181",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4182",
+      "name": "Expansion 4182",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 86,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4184",
+      "name": "Expansion 4184",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 25,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4185",
+      "name": "Expansion 4185",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 58,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4186",
+      "name": "Expansion 4186",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 58,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4187",
+      "name": "Expansion 4187",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 72,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4188",
+      "name": "Expansion 4188",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4189",
+      "name": "Expansion 4189",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4190",
+      "name": "Expansion 4190",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4192",
+      "name": "Expansion 4192",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4191",
+      "name": "Expansion 4191",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 46,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4193",
+      "name": "Expansion 4193",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 79,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4194",
+      "name": "Expansion 4194",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 65,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4195",
+      "name": "Expansion 4195",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 65,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4328",
+      "name": "Expansion 4328",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 258,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4196",
+      "name": "Expansion 4196",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 48,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4197",
+      "name": "Expansion 4197",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4198",
+      "name": "Expansion 4198",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4199",
+      "name": "Expansion 4199",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4200",
+      "name": "Expansion 4200",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 55,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4201",
+      "name": "Expansion 4201",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 55,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4203",
+      "name": "Expansion 4203",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4204",
+      "name": "Expansion 4204",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 76,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4205",
+      "name": "Expansion 4205",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 32,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4206",
+      "name": "Expansion 4206",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4207",
+      "name": "Expansion 4207",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4208",
+      "name": "Expansion 4208",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 57,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4209",
+      "name": "Expansion 4209",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 57,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4211",
+      "name": "Expansion 4211",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 26,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4210",
+      "name": "Expansion 4210",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 72,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4212",
+      "name": "Expansion 4212",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 42,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4217",
+      "name": "Expansion 4217",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 9,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4216",
+      "name": "Expansion 4216",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 43,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4213",
+      "name": "Expansion 4213",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 56,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4214",
+      "name": "Expansion 4214",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 56,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4319",
+      "name": "Expansion 4319",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4339",
+      "name": "Expansion 4339",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4340",
+      "name": "Expansion 4340",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4342",
+      "name": "Expansion 4342",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 9,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4343",
+      "name": "Expansion 4343",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 9,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4341",
+      "name": "Expansion 4341",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 154,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4348",
+      "name": "Expansion 4348",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4349",
+      "name": "Expansion 4349",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 32,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4350",
+      "name": "Expansion 4350",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 63,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4352",
+      "name": "Expansion 4352",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 2,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4351",
+      "name": "Expansion 4351",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4354",
+      "name": "Expansion 4354",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4353",
+      "name": "Expansion 4353",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 47,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4355",
+      "name": "Expansion 4355",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 48,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4329",
+      "name": "Expansion 4329",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 90,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4330",
+      "name": "Expansion 4330",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 90,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4357",
+      "name": "Expansion 4357",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4361",
+      "name": "Expansion 4361",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 62,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4347",
+      "name": "Expansion 4347",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 69,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4381",
+      "name": "Expansion 4381",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 13,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4360",
+      "name": "Expansion 4360",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 129,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4392",
+      "name": "Expansion 4392",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4345",
+      "name": "Expansion 4345",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 38,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4346",
+      "name": "Expansion 4346",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 25,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4382",
+      "name": "Expansion 4382",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 299,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4389",
+      "name": "Expansion 4389",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4385",
+      "name": "Expansion 4385",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 30,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4463",
+      "name": "Expansion 4463",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 48,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4464",
+      "name": "Expansion 4464",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 48,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4465",
+      "name": "Expansion 4465",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 65,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4390",
+      "name": "Expansion 4390",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 293,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4388",
+      "name": "Expansion 4388",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 430,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4490",
+      "name": "Expansion 4490",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 48,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4466",
+      "name": "Expansion 4466",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 96,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4467",
+      "name": "Expansion 4467",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 98,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4440",
+      "name": "Expansion 4440",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 127,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4505",
+      "name": "Expansion 4505",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 5,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4506",
+      "name": "Expansion 4506",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 96,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4515",
+      "name": "Expansion 4515",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 38,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4507",
+      "name": "Expansion 4507",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 57,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4518",
+      "name": "Expansion 4518",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 25,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4508",
+      "name": "Expansion 4508",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 57,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4434",
+      "name": "Expansion 4434",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 252,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4509",
+      "name": "Expansion 4509",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 113,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4516",
+      "name": "Expansion 4516",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 22,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4517",
+      "name": "Expansion 4517",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 21,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4441",
+      "name": "Expansion 4441",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 93,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4979",
+      "name": "Expansion 4979",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 271,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5021",
+      "name": "Expansion 5021",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 157,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4973",
+      "name": "Expansion 4973",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 88,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4974",
+      "name": "Expansion 4974",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 88,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5034",
+      "name": "Expansion 5034",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6199",
+      "name": "Expansion 6199",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 139,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5022",
+      "name": "Expansion 5022",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 92,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5023",
+      "name": "Expansion 5023",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 90,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5051",
+      "name": "Expansion 5051",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 109,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5024",
+      "name": "Expansion 5024",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 91,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5025",
+      "name": "Expansion 5025",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 91,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5059",
+      "name": "Expansion 5059",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 41,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5060",
+      "name": "Expansion 5060",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 41,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5061",
+      "name": "Expansion 5061",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 40,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5062",
+      "name": "Expansion 5062",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 40,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5048",
+      "name": "Expansion 5048",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 99,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4786",
+      "name": "Expansion 4786",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 102,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5093",
+      "name": "Expansion 5093",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 265,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5098",
+      "name": "Expansion 5098",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 6,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5097",
+      "name": "Expansion 5097",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 21,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5096",
+      "name": "Expansion 5096",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 21,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5094",
+      "name": "Expansion 5094",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 127,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4261",
+      "name": "Expansion 4261",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 81,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4262",
+      "name": "Expansion 4262",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 40,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4265",
+      "name": "Expansion 4265",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 81,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4263",
+      "name": "Expansion 4263",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4264",
+      "name": "Expansion 4264",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4266",
+      "name": "Expansion 4266",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4267",
+      "name": "Expansion 4267",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 14,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4268",
+      "name": "Expansion 4268",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 10,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4269",
+      "name": "Expansion 4269",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 9,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4270",
+      "name": "Expansion 4270",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 10,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4271",
+      "name": "Expansion 4271",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 11,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4273",
+      "name": "Expansion 4273",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 79,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4272",
+      "name": "Expansion 4272",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 71,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5135",
+      "name": "Expansion 5135",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5138",
+      "name": "Expansion 5138",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 30,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5142",
+      "name": "Expansion 5142",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 262,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5127",
+      "name": "Expansion 5127",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 94,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4277",
+      "name": "Expansion 4277",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4278",
+      "name": "Expansion 4278",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 17,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4279",
+      "name": "Expansion 4279",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 17,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4280",
+      "name": "Expansion 4280",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 90,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4281",
+      "name": "Expansion 4281",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4282",
+      "name": "Expansion 4282",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4283",
+      "name": "Expansion 4283",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4284",
+      "name": "Expansion 4284",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4285",
+      "name": "Expansion 4285",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4286",
+      "name": "Expansion 4286",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 100,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4287",
+      "name": "Expansion 4287",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4288",
+      "name": "Expansion 4288",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4289",
+      "name": "Expansion 4289",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 90,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4290",
+      "name": "Expansion 4290",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4291",
+      "name": "Expansion 4291",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4292",
+      "name": "Expansion 4292",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 14,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4293",
+      "name": "Expansion 4293",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 13,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4294",
+      "name": "Expansion 4294",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 13,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4295",
+      "name": "Expansion 4295",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 13,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4296",
+      "name": "Expansion 4296",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 13,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4297",
+      "name": "Expansion 4297",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 96,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5156",
+      "name": "Expansion 5156",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 125,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5179",
+      "name": "Expansion 5179",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 32,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5201",
+      "name": "Expansion 5201",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 255,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5212",
+      "name": "Expansion 5212",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 304,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5198",
+      "name": "Expansion 5198",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 262,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5224",
+      "name": "Expansion 5224",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 56,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5223",
+      "name": "Expansion 5223",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 315,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4300",
+      "name": "Expansion 4300",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 14,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4301",
+      "name": "Expansion 4301",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 14,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4302",
+      "name": "Expansion 4302",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 92,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4303",
+      "name": "Expansion 4303",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4306",
+      "name": "Expansion 4306",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 42,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5241",
+      "name": "Expansion 5241",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 304,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5335",
+      "name": "Expansion 5335",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 122,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5216",
+      "name": "Expansion 5216",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 116,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5221",
+      "name": "Expansion 5221",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 28,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5218",
+      "name": "Expansion 5218",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 26,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5219",
+      "name": "Expansion 5219",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5220",
+      "name": "Expansion 5220",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 26,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5217",
+      "name": "Expansion 5217",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 108,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5204",
+      "name": "Expansion 5204",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 211,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4304",
+      "name": "Expansion 4304",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 65,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4305",
+      "name": "Expansion 4305",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 65,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4307",
+      "name": "Expansion 4307",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 28,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6203",
+      "name": "Expansion 6203",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 108,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4308",
+      "name": "Expansion 4308",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 70,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4309",
+      "name": "Expansion 4309",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 70,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4311",
+      "name": "Expansion 4311",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4312",
+      "name": "Expansion 4312",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4313",
+      "name": "Expansion 4313",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 119,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4315",
+      "name": "Expansion 4315",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4316",
+      "name": "Expansion 4316",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4317",
+      "name": "Expansion 4317",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 123,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4318",
+      "name": "Expansion 4318",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 122,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5257",
+      "name": "Expansion 5257",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 103,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5299",
+      "name": "Expansion 5299",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5318",
+      "name": "Expansion 5318",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 336,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5313",
+      "name": "Expansion 5313",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 188,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5314",
+      "name": "Expansion 5314",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 99,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5315",
+      "name": "Expansion 5315",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 99,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5351",
+      "name": "Expansion 5351",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 7,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5385",
+      "name": "Expansion 5385",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 271,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5328",
+      "name": "Expansion 5328",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 210,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5410",
+      "name": "Expansion 5410",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 32,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5402",
+      "name": "Expansion 5402",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 239,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5362",
+      "name": "Expansion 5362",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 139,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5422",
+      "name": "Expansion 5422",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 38,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5409",
+      "name": "Expansion 5409",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 141,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5960",
+      "name": "Expansion 5960",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 26,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5430",
+      "name": "Expansion 5430",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5431",
+      "name": "Expansion 5431",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 201,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5444",
+      "name": "Expansion 5444",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 314,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5405",
+      "name": "Expansion 5405",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 30,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5476",
+      "name": "Expansion 5476",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 22,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5477",
+      "name": "Expansion 5477",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 22,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5432",
+      "name": "Expansion 5432",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 92,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5478",
+      "name": "Expansion 5478",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 95,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5479",
+      "name": "Expansion 5479",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 95,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5526",
+      "name": "Expansion 5526",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 48,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5527",
+      "name": "Expansion 5527",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 34,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5528",
+      "name": "Expansion 5528",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 34,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5529",
+      "name": "Expansion 5529",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 34,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5525",
+      "name": "Expansion 5525",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 52,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5530",
+      "name": "Expansion 5530",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 35,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5531",
+      "name": "Expansion 5531",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 34,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5532",
+      "name": "Expansion 5532",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 34,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5519",
+      "name": "Expansion 5519",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 360,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5546",
+      "name": "Expansion 5546",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 266,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5589",
+      "name": "Expansion 5589",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 255,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5575",
+      "name": "Expansion 5575",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 53,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5576",
+      "name": "Expansion 5576",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 53,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5573",
+      "name": "Expansion 5573",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 100,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5574",
+      "name": "Expansion 5574",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 100,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5620",
+      "name": "Expansion 5620",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 114,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6194",
+      "name": "Expansion 6194",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 109,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5681",
+      "name": "Expansion 5681",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 9,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5682",
+      "name": "Expansion 5682",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 11,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5683",
+      "name": "Expansion 5683",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 10,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5684",
+      "name": "Expansion 5684",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 7,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5685",
+      "name": "Expansion 5685",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 11,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5686",
+      "name": "Expansion 5686",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 11,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5621",
+      "name": "Expansion 5621",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 98,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5636",
+      "name": "Expansion 5636",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 96,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5693",
+      "name": "Expansion 5693",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 68,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5694",
+      "name": "Expansion 5694",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5695",
+      "name": "Expansion 5695",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5698",
+      "name": "Expansion 5698",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5699",
+      "name": "Expansion 5699",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5700",
+      "name": "Expansion 5700",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 75,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5703",
+      "name": "Expansion 5703",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 52,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5709",
+      "name": "Expansion 5709",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 86,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5715",
+      "name": "Expansion 5715",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5716",
+      "name": "Expansion 5716",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5717",
+      "name": "Expansion 5717",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5718",
+      "name": "Expansion 5718",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 42,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5719",
+      "name": "Expansion 5719",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5710",
+      "name": "Expansion 5710",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 86,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "4314",
+      "name": "Expansion 4314",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 108,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5690",
+      "name": "Expansion 5690",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 133,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5890",
+      "name": "Expansion 5890",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 140,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5691",
+      "name": "Expansion 5691",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 263,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5737",
+      "name": "Expansion 5737",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 22,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5738",
+      "name": "Expansion 5738",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5757",
+      "name": "Expansion 5757",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 94,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5782",
+      "name": "Expansion 5782",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 135,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5835",
+      "name": "Expansion 5835",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 52,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5834",
+      "name": "Expansion 5834",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 70,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5760",
+      "name": "Expansion 5760",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 109,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5849",
+      "name": "Expansion 5849",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 115,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5711",
+      "name": "Expansion 5711",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 106,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5720",
+      "name": "Expansion 5720",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5721",
+      "name": "Expansion 5721",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5722",
+      "name": "Expansion 5722",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5723",
+      "name": "Expansion 5723",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 91,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5724",
+      "name": "Expansion 5724",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 38,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5726",
+      "name": "Expansion 5726",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5725",
+      "name": "Expansion 5725",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5712",
+      "name": "Expansion 5712",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 85,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5727",
+      "name": "Expansion 5727",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5728",
+      "name": "Expansion 5728",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5861",
+      "name": "Expansion 5861",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 9,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5713",
+      "name": "Expansion 5713",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 82,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5714",
+      "name": "Expansion 5714",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 82,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5729",
+      "name": "Expansion 5729",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 52,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5863",
+      "name": "Expansion 5863",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5864",
+      "name": "Expansion 5864",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 83,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5865",
+      "name": "Expansion 5865",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5866",
+      "name": "Expansion 5866",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 18,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5867",
+      "name": "Expansion 5867",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 33,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5868",
+      "name": "Expansion 5868",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 33,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5869",
+      "name": "Expansion 5869",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 80,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5870",
+      "name": "Expansion 5870",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5871",
+      "name": "Expansion 5871",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5872",
+      "name": "Expansion 5872",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 54,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5873",
+      "name": "Expansion 5873",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 53,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5874",
+      "name": "Expansion 5874",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5875",
+      "name": "Expansion 5875",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5876",
+      "name": "Expansion 5876",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5877",
+      "name": "Expansion 5877",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 55,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5841",
+      "name": "Expansion 5841",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 25,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5842",
+      "name": "Expansion 5842",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 25,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5796",
+      "name": "Expansion 5796",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 36,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5802",
+      "name": "Expansion 5802",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 207,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5846",
+      "name": "Expansion 5846",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 94,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5914",
+      "name": "Expansion 5914",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 49,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5915",
+      "name": "Expansion 5915",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 49,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5901",
+      "name": "Expansion 5901",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 138,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5879",
+      "name": "Expansion 5879",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 281,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6258",
+      "name": "Expansion 6258",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 178,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6257",
+      "name": "Expansion 6257",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 176,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6248",
+      "name": "Expansion 6248",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 89,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6247",
+      "name": "Expansion 6247",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 96,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6249",
+      "name": "Expansion 6249",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 169,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6266",
+      "name": "Expansion 6266",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 184,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6267",
+      "name": "Expansion 6267",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 179,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6273",
+      "name": "Expansion 6273",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 23,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5927",
+      "name": "Expansion 5927",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 175,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5978",
+      "name": "Expansion 5978",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5928",
+      "name": "Expansion 5928",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 237,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5944",
+      "name": "Expansion 5944",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 180,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6009",
+      "name": "Expansion 6009",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 241,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6001",
+      "name": "Expansion 6001",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 115,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6099",
+      "name": "Expansion 6099",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 192,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5997",
+      "name": "Expansion 5997",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 53,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5996",
+      "name": "Expansion 5996",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 132,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6329",
+      "name": "Expansion 6329",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 220,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6041",
+      "name": "Expansion 6041",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 119,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6017",
+      "name": "Expansion 6017",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 21,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6016",
+      "name": "Expansion 6016",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 21,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5992",
+      "name": "Expansion 5992",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 102,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6037",
+      "name": "Expansion 6037",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 92,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6006",
+      "name": "Expansion 6006",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 190,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6088",
+      "name": "Expansion 6088",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 35,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6328",
+      "name": "Expansion 6328",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 107,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6092",
+      "name": "Expansion 6092",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 132,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6121",
+      "name": "Expansion 6121",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 163,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6128",
+      "name": "Expansion 6128",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 211,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6127",
+      "name": "Expansion 6127",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 294,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6111",
+      "name": "Expansion 6111",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 140,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6096",
+      "name": "Expansion 6096",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 244,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6140",
+      "name": "Expansion 6140",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 37,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6110",
+      "name": "Expansion 6110",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 165,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "5415",
+      "name": "Expansion 5415",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 9,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6130",
+      "name": "Expansion 6130",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 174,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6131",
+      "name": "Expansion 6131",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 174,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6168",
+      "name": "Expansion 6168",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 141,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6193",
+      "name": "Expansion 6193",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 167,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6204",
+      "name": "Expansion 6204",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 184,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6205",
+      "name": "Expansion 6205",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 177,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6169",
+      "name": "Expansion 6169",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 165,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6135",
+      "name": "Expansion 6135",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 173,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6134",
+      "name": "Expansion 6134",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 172,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6197",
+      "name": "Expansion 6197",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 158,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6198",
+      "name": "Expansion 6198",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 159,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6219",
+      "name": "Expansion 6219",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 306,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6220",
+      "name": "Expansion 6220",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 245,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6222",
+      "name": "Expansion 6222",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 152,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6223",
+      "name": "Expansion 6223",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 152,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6230",
+      "name": "Expansion 6230",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 51,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6239",
+      "name": "Expansion 6239",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 51,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6189",
+      "name": "Expansion 6189",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 92,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6190",
+      "name": "Expansion 6190",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 92,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6250",
+      "name": "Expansion 6250",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 172,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6252",
+      "name": "Expansion 6252",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 83,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6214",
+      "name": "Expansion 6214",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 119,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6265",
+      "name": "Expansion 6265",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 90,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6272",
+      "name": "Expansion 6272",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 23,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6274",
+      "name": "Expansion 6274",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6275",
+      "name": "Expansion 6275",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 26,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6276",
+      "name": "Expansion 6276",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 79,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6279",
+      "name": "Expansion 6279",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 143,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6281",
+      "name": "Expansion 6281",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 143,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6288",
+      "name": "Expansion 6288",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 96,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6297",
+      "name": "Expansion 6297",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 217,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6260",
+      "name": "Expansion 6260",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 23,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6259",
+      "name": "Expansion 6259",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 23,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6303",
+      "name": "Expansion 6303",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 4,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6302",
+      "name": "Expansion 6302",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6301",
+      "name": "Expansion 6301",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6298",
+      "name": "Expansion 6298",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 199,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6237",
+      "name": "Expansion 6237",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 164,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6313",
+      "name": "Expansion 6313",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 99,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6314",
+      "name": "Expansion 6314",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 88,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6319",
+      "name": "Expansion 6319",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 194,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6292",
+      "name": "Expansion 6292",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 136,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6291",
+      "name": "Expansion 6291",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 116,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6320",
+      "name": "Expansion 6320",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 193,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6290",
+      "name": "Expansion 6290",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6232",
+      "name": "Expansion 6232",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 43,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6324",
+      "name": "Expansion 6324",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 8,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6209",
+      "name": "Expansion 6209",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 188,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6321",
+      "name": "Expansion 6321",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 192,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6309",
+      "name": "Expansion 6309",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 101,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6341",
+      "name": "Expansion 6341",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 211,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6342",
+      "name": "Expansion 6342",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 204,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6343",
+      "name": "Expansion 6343",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 212,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6347",
+      "name": "Expansion 6347",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 20,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6348",
+      "name": "Expansion 6348",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 25,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6349",
+      "name": "Expansion 6349",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 16,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6350",
+      "name": "Expansion 6350",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 13,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6354",
+      "name": "Expansion 6354",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 8,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6355",
+      "name": "Expansion 6355",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 68,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6356",
+      "name": "Expansion 6356",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 8,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6357",
+      "name": "Expansion 6357",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 13,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6366",
+      "name": "Expansion 6366",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 5,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6367",
+      "name": "Expansion 6367",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 8,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6368",
+      "name": "Expansion 6368",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 19,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6369",
+      "name": "Expansion 6369",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 15,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6231",
+      "name": "Expansion 6231",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 7,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6299",
+      "name": "Expansion 6299",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 130,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6362",
+      "name": "Expansion 6362",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 163,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6300",
+      "name": "Expansion 6300",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 12,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6361",
+      "name": "Expansion 6361",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 139,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6330",
+      "name": "Expansion 6330",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 50,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6391",
+      "name": "Expansion 6391",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 50,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6392",
+      "name": "Expansion 6392",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 44,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6393",
+      "name": "Expansion 6393",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 34,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6394",
+      "name": "Expansion 6394",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 58,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6287",
+      "name": "Expansion 6287",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 176,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6310",
+      "name": "Expansion 6310",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 24,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6334",
+      "name": "Expansion 6334",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 30,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6311",
+      "name": "Expansion 6311",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 33,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6335",
+      "name": "Expansion 6335",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 88,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6401",
+      "name": "Expansion 6401",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 9,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6380",
+      "name": "Expansion 6380",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 250,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6409",
+      "name": "Expansion 6409",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 236,
+      "autoMatched": false
+    },
+    {
+      "idExpansion": "6413",
+      "name": "Expansion 6413",
+      "tcgdexId": null,
+      "printedCode": null,
+      "cardmarketExpansionId": null,
+      "releaseDate": null,
+      "productCount": 51,
+      "autoMatched": false
+    }
+  ]
+}
