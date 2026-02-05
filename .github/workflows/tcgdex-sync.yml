@@ -3,7 +3,7 @@ name: TCGdex Daily Sync
 on:
   schedule:
     # GitHub Actions uses UTC for cron. 10:00 Europe/Warsaw (CET/UTC+1 in winter) = 09:00 UTC
-    - cron: "0 9 * * *"
+    - cron: "0 14 * * *"
   workflow_dispatch:
 
 permissions:
