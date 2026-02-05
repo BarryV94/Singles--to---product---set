@@ -2,7 +2,8 @@ name: TCGdex Daily Sync
 
 on:
   schedule:
-    - cron: "0 3 * * *"
+    # GitHub Actions uses UTC for cron. 10:00 Europe/Warsaw (CET/UTC+1 in winter) = 09:00 UTC
+    - cron: "0 9 * * *"
   workflow_dispatch:
 
 permissions:
@@ -24,7 +25,7 @@ jobs:
       - name: Fetch base card list
         run: node scripts/fetch-baza.js
 
-      - name: Build western.json
+      - name: Build western.json and save dated EN file
         run: node scripts/build-western.js
 
       - name: Commit changes
@@ -32,6 +33,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add baza.json western.json
+          git add EN || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
