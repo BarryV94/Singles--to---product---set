@@ -3,10 +3,11 @@ const path = require('path');
 const zlib = require('zlib');
 
 const BASE_PATH = path.resolve("baza.json.gz");
-const ROOT_EN_DIR = path.resolve("EN");
+const ROOT_EN_DIR = path.resolve("en");
 const BASE_URL = "https://api.tcgdex.net/v2/en/cards";
-const RATE_LIMIT_DELAY = 120;
+const RATE_LIMIT_DELAY = 0;
 const MAX_FILES_PER_SUBFOLDER = 999;
+const CONCURRENCY = 40;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -94,6 +95,30 @@ function saveDatedWesternFile(content) {
   console.log(`✅ Saved dated western file: ${filePath}`);
 }
 
+function asyncPool(poolLimit, array, iteratorFn) {
+  let i = 0;
+  const ret = [];
+  const executing = [];
+  const enqueue = () => {
+    if (i === array.length) return Promise.resolve();
+    const item = array[i++];
+    const p = Promise.resolve().then(() => iteratorFn(item));
+    ret.push(p);
+    const e = p.then(() => {
+      const idx = executing.indexOf(e);
+      if (idx > -1) executing.splice(idx, 1);
+    }).catch(() => {
+      const idx = executing.indexOf(e);
+      if (idx > -1) executing.splice(idx, 1);
+    });
+    executing.push(e);
+    let r = Promise.resolve();
+    if (executing.length >= poolLimit) r = Promise.race(executing);
+    return r.then(() => enqueue());
+  };
+  return enqueue().then(() => Promise.all(ret));
+}
+
 async function main() {
   try {
     console.log("📦 Loading baza.json.gz...");
@@ -108,20 +133,18 @@ async function main() {
       throw new Error("Invalid base response format (expected array)");
     }
     console.log(`🔧 Building dated western file from ${baseCards.length} base entries...`);
-    const western = [];
-    for (let i = 0; i < baseCards.length; i++) {
-      const base = baseCards[i];
-      const details = await fetchCardDetails(base.id);
-      if (details) {
-        western.push(details);
-      } else {
-        console.warn(`⚠️ Missing details for id=${base.id} (skipping)`);
-      }
-      if (i % 500 === 0 && i !== 0) {
-        console.log(`✔ processed ${i}/${baseCards.length}`);
-      }
-      await sleep(RATE_LIMIT_DELAY);
-    }
+    const ids = baseCards.map(b => b.id);
+    let processed = 0;
+    const results = await asyncPool(CONCURRENCY, ids, async (id) => {
+      const details = await fetchCardDetails(id);
+      processed++;
+      if (processed % 500 === 0) console.log(`✔ processed ${processed}/${ids.length}`);
+      if (RATE_LIMIT_DELAY) await sleep(RATE_LIMIT_DELAY);
+      if (details) return details;
+      console.warn(`⚠️ Missing details for id=${id} (skipping)`);
+      return null;
+    });
+    const western = results.filter(Boolean);
     console.log(`✅ DONE – collected ${western.length} detailed cards. Now saving dated file...`);
     try {
       saveDatedWesternFile(western);
