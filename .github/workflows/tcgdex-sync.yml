@@ -2,7 +2,6 @@ name: TCGdex Daily Sync
 
 on:
   schedule:
-    # GitHub Actions uses UTC for cron. 10:00 Europe/Warsaw (CET/UTC+1 in winter) = 09:00 UTC
     - cron: "0 14 * * *"
   workflow_dispatch:
 
@@ -32,8 +31,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add baza.json western.json
-          git add EN || true
+          git add -A
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
