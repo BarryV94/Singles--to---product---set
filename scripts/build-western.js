@@ -1,96 +1,24 @@
+// scripts/build-western.js
 const fs = require('fs');
 const path = require('path');
+const zlib = require('zlib');
 
-const BASE_PATH = path.resolve("baza.json");
-const OUTPUT_PATH = path.resolve("western.json");
+const BASE_PATH = path.resolve("baza.json.gz");
+const ROOT_EN_DIR = path.resolve("EN");
 
 const BASE_URL = "https://api.tcgdex.net/v2/en/cards";
 const RATE_LIMIT_DELAY = 120; // ms – bezpieczne dla GH Actions
 const MAX_FILES_PER_SUBFOLDER = 999;
-const ROOT_EN_DIR = path.resolve("EN");
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-if (typeof fetch === "undefined") {
-  console.error("Global fetch nie jest dostępny. Uruchom na Node >= 18 (Node 20 w CI ma fetch).");
-  process.exit(1);
-}
-
 /**
- * Bezpieczny deep merge (bez bibliotek)
- */
-function deepMerge(target, source) {
-  if (!source) return target;
-
-  for (const key of Object.keys(source)) {
-    if (
-      source[key] &&
-      typeof source[key] === "object" &&
-      !Array.isArray(source[key])
-    ) {
-      target[key] = deepMerge(target[key] ?? {}, source[key]);
-    } else {
-      target[key] = source[key];
-    }
-  }
-  return target;
-}
-
-/**
- * Fallback – 100% zgodny ze schematem western.json
- */
-function buildFallbackCard(base) {
-  return {
-    category: base.category ?? "",
-    id: base.id,
-    illustrator: "",
-    image: base.image ?? "",
-    localId: base.localId ?? "",
-    name: base.name ?? "",
-    rarity: base.rarity ?? "",
-    set: {
-      cardCount: base.set?.cardCount ?? { official: null, total: null },
-      id: base.set?.id ?? "",
-      logo: base.set?.logo ?? "",
-      name: base.set?.name ?? "",
-      symbol: base.set?.symbol ?? ""
-    },
-    variants: {
-      firstEdition: false,
-      holo: false,
-      normal: false,
-      reverse: false,
-      wPromo: false
-    },
-    variants_detailed: [],
-    dexId: [],
-    hp: null,
-    types: [],
-    evolveFrom: "",
-    description: "",
-    stage: "",
-    attacks: [],
-    weaknesses: [],
-    retreat: null,
-    regulationMark: "",
-    legal: {
-      standard: false,
-      expanded: false
-    },
-    updated: new Date().toISOString(),
-    pricing: {
-      cardmarket: null,
-      tcgplayer: null
-    }
-  };
-}
-
-/**
- * Pobranie szczegółów karty – NIGDY NIE RZUCA BŁĘDU
+ * Pobranie szczegółów karty – NIGDY NIE RZUCA BŁĘDU, zwraca `null` gdy brak danych.
  */
 async function fetchCardDetails(cardId) {
+  if (!cardId) return null;
   const safeId = encodeURIComponent(decodeURIComponent(cardId));
 
   for (let attempt = 1; attempt <= 3; attempt++) {
@@ -98,22 +26,27 @@ async function fetchCardDetails(cardId) {
       const res = await fetch(`${BASE_URL}/${safeId}`);
 
       if (res.ok) {
-        return await res.json();
+        try {
+          return await res.json();
+        } catch {
+          return null;
+        }
       }
 
-      // 400 / 404 = bug TCGdexa → fallback
+      // 400 / 404 = brak danych → zwróć null (nie retryujemy)
       if (res.status === 400 || res.status === 404) {
         return null;
       }
 
-      // 429 / 5xx → retry
+      // 429 / 5xx → retry z rosnącym opóźnieniem
       if (res.status >= 429) {
         await sleep(300 * attempt);
         continue;
       }
 
       return null;
-    } catch {
+    } catch (err) {
+      // sieciowe błędy → retry
       await sleep(300 * attempt);
     }
   }
@@ -122,7 +55,7 @@ async function fetchCardDetails(cardId) {
 }
 
 /**
- * Zapisuje plik do struktury EN/<n>/western_DD_MM_YYYY.json.
+ * Zapisuje plik do struktury EN/<n>/western_DD_MM_YYYY.json.gz.
  * Tworzy katalog EN oraz podfoldery numerowane automatycznie.
  */
 function saveDatedWesternFile(content) {
@@ -171,34 +104,47 @@ function saveDatedWesternFile(content) {
   }).format(now); // e.g., "05.02.2026"
   const dateStr = dateStrDots.replace(/\./g, "_"); // "05_02_2026"
 
-  const fileName = `western_${dateStr}.json`;
+  const fileName = `western_${dateStr}.json.gz`;
   const filePath = path.join(targetFolder, fileName);
 
-  // write (overwrites if already exists)
-  fs.writeFileSync(filePath, JSON.stringify(content, null, 2));
+  const json = JSON.stringify(content, null, 2);
+  const gz = zlib.gzipSync(Buffer.from(json, "utf8"));
+  fs.writeFileSync(filePath, gz);
+
   console.log(`✅ Saved dated western file: ${filePath}`);
 }
 
 async function main() {
   try {
-    console.log("📦 Loading baza.json...");
-    const baseCards = JSON.parse(fs.readFileSync(BASE_PATH, "utf8"));
+    console.log("📦 Loading baza.json.gz...");
 
-    console.log(`🔧 Building western.json from ${baseCards.length} cards...`);
+    if (!fs.existsSync(BASE_PATH)) {
+      console.error(`Brak pliku bazowego: ${BASE_PATH}. Upewnij się, że uruchomiłeś fetch-baza.js.`);
+      process.exit(1);
+    }
+
+    const gzBuf = fs.readFileSync(BASE_PATH);
+    const jsonBuf = zlib.gunzipSync(gzBuf);
+    const baseCards = JSON.parse(jsonBuf.toString("utf8"));
+
+    if (!Array.isArray(baseCards)) {
+      throw new Error("Invalid base response format (expected array)");
+    }
+
+    console.log(`🔧 Building dated western file from ${baseCards.length} base entries...`);
 
     const western = [];
 
     for (let i = 0; i < baseCards.length; i++) {
       const base = baseCards[i];
-
-      const fallback = buildFallbackCard(base);
+      // pobieramy WYŁĄCZNIE dane z API dla danego id
       const details = await fetchCardDetails(base.id);
 
-      const finalCard = details
-        ? deepMerge(fallback, details)
-        : fallback;
-
-      western.push(finalCard);
+      if (details) {
+        western.push(details);
+      } else {
+        console.warn(`⚠️ Missing details for id=${base.id} (skipping)`);
+      }
 
       if (i % 500 === 0 && i !== 0) {
         console.log(`✔ processed ${i}/${baseCards.length}`);
@@ -207,11 +153,9 @@ async function main() {
       await sleep(RATE_LIMIT_DELAY);
     }
 
-    // Save the canonical western.json in repo root (backwards compatibility)
-    fs.writeFileSync(OUTPUT_PATH, JSON.stringify(western, null, 2));
-    console.log(`✅ DONE – saved ${western.length} cards to ${OUTPUT_PATH}`);
+    // **Nie zapisujemy canonical western.json w repo root** (zgodnie z wymaganiem)
+    console.log(`✅ DONE – collected ${western.length} detailed cards. Now saving dated file...`);
 
-    // Also save dated file inside EN/<n>/western_DD_MM_YYYY.json
     try {
       saveDatedWesternFile(western);
     } catch (err) {
