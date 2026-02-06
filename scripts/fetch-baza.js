@@ -1,4 +1,3 @@
-// scripts/fetch-baza.js
 const fs = require('fs');
 const zlib = require('zlib');
 
@@ -13,25 +12,19 @@ if (typeof fetch === "undefined") {
 async function run() {
   try {
     console.log("Fetching base card list from TCGdex...");
-
     const res = await fetch(API_URL, {
       headers: { "User-Agent": "tcgdex-sync-bot" }
     });
-
     if (!res.ok) {
       throw new Error(`Failed to fetch base list: ${res.status}`);
     }
-
     const data = await res.json();
-
     if (!Array.isArray(data)) {
       throw new Error("Invalid base response format");
     }
-
     const json = JSON.stringify(data, null, 2);
     const gz = zlib.gzipSync(Buffer.from(json, "utf8"));
     fs.writeFileSync(OUTPUT_GZ, gz);
-
     console.log(`Saved ${data.length} cards to ${OUTPUT_GZ}`);
   } catch (err) {
     console.error(err);
