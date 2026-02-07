@@ -1,0 +1,58 @@
+name: Fetch TCGplayer Category 3 Data
+
+# Cron używa czasu UTC. Przy CET/zimą: 14:00 UTC == 15:00 Europe/Warsaw.
+# Jeśli chcesz dokładnie 15:00 lokalnego czasu niezależnie od DST, powiedz a zamienię na inną metodę.
+on:
+  schedule:
+    - cron: '0 14 * * *'   # codziennie o 14:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Run fetch script
+        # uruchamiamy skrypt który leży w scripts/
+        run: |
+          python scripts/fetch_tcgplayer_category3.py
+
+      - name: Show created files (debug)
+        run: |
+          ls -la prices_tcgplayer || true
+          echo "Newest files:"
+          ls -la prices_tcgplayer | tail -n 10 || true
+
+      - name: Commit and push results
+        env:
+          GIT_COMMITTER_NAME: "github-actions[bot]"
+          GIT_COMMITTER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
+        run: |
+          git config user.name "$GIT_COMMITTER_NAME"
+          git config user.email "$GIT_COMMITTER_EMAIL"
+
+          # Dodajemy tylko folder z wynikami (nie nadpisujemy skryptów)
+          git add prices_tcgplayer || true
+
+          # Commit tylko gdy są zmiany
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update: TCGplayer category3 data $(date -u +'%Y-%m-%d')"
+            git push
+          fi
