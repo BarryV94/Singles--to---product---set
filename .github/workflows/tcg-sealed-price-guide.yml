@@ -2,7 +2,7 @@ name: TCGPlayer Sealed Price Guide
 
 on:
   schedule:
-    - cron: '0 2 * * *'   # codziennie 02:00 UTC — zmień jeśli trzeba
+    - cron: '0 2 * * *'   # codziennie 02:00 UTC (zmień wedle potrzeb)
   workflow_dispatch: {}
 
 permissions:
