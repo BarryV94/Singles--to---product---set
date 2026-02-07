@@ -2,7 +2,7 @@ name: TCGPlayer Sealed Price Guide
 
 on:
   schedule:
-    - cron: '0 2 * * *'   # codziennie 02:00 UTC — zmień wedle potrzeb
+    - cron: '0 2 * * *'   # codziennie 02:00 UTC — zmień jeśli trzeba
   workflow_dispatch: {}
 
 permissions:
@@ -30,14 +30,14 @@ jobs:
       - name: Ensure output folder exists
         run: mkdir -p tcg-sealed-price-guide
 
-      - name: Run scraper
+      - name: Run scraper (scripts/scrape_tcg.py)
         env:
           BASE_PATTERN: 'https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page={page}&view=grid&ProductTypeName=Sealed+Products'
           START_PAGE: '1'
           MAX_PAGES: '200'
           OUT_DIR: 'tcg-sealed-price-guide'
         run: |
-          python scrape_tcg.py "$BASE_PATTERN" "$START_PAGE" "$MAX_PAGES" "$OUT_DIR"
+          python scripts/scrape_tcg.py "$BASE_PATTERN" "$START_PAGE" "$MAX_PAGES" "$OUT_DIR"
 
       - name: Commit and push results (if changed)
         run: |
