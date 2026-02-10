@@ -1,4 +1,8 @@
 // build-western.js
+// Automatic conversion: this script builds dated western_*.json.gz (new data)
+// and then AUTOMATICALLY scans en/*/*.json.gz and converts any legacy full entries
+// into the new minimal format, OVERWRITING them WITHOUT CREATING BACKUPS.
+
 const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
@@ -58,6 +62,61 @@ async function fetchCardDetails(cardId) {
   return null;
 }
 
+/* --------------------------
+   transformDetails -> minimal
+   -------------------------- */
+function transformDetails(details, originalId) {
+  if (!details || typeof details !== 'object') return null;
+
+  const pricing = details.pricing || {};
+  const cardmarket = pricing.cardmarket || {};
+  const tcgplayer = pricing.tcgplayer || {};
+
+  // choose top-level id: cardmarket.idProduct if present; else details.id; else originalId
+  let topId = null;
+  if (cardmarket && (cardmarket.idProduct || cardmarket.idProduct === 0)) {
+    topId = cardmarket.idProduct;
+  } else if (details.id) {
+    topId = details.id;
+  } else {
+    topId = originalId || null;
+  }
+
+  const appendHigh = (img) => {
+    if (!img || typeof img !== 'string') return null;
+    if (img.endsWith('/high.webp')) return img;
+    let trimmed = img.replace(/\/+$/, '');
+    return `${trimmed}/high.webp`;
+  };
+
+  let imageField = null;
+  if (Array.isArray(details.image)) {
+    const mapped = details.image.map(appendHigh).filter(Boolean);
+    imageField = mapped.length ? mapped : null;
+  } else if (typeof details.image === 'string') {
+    imageField = appendHigh(details.image);
+  } else if (details.image && typeof details.image === 'object' && (details.image.small || details.image.large)) {
+    imageField = appendHigh(details.image.small) || appendHigh(details.image.large) || null;
+  } else {
+    imageField = null;
+  }
+
+  return {
+    name: details.name ?? null,
+    image: imageField,
+    id: topId,
+    set: {
+      id: details.set && details.set.id ? details.set.id : null,
+      name: details.set && details.set.name ? details.set.name : null
+    },
+    cardmarket: cardmarket,
+    tcgplayer: tcgplayer
+  };
+}
+
+/* --------------------------
+   save dated file
+   -------------------------- */
 function saveDatedWesternFile(content) {
   fs.mkdirSync(ROOT_EN_DIR, { recursive: true });
   let idx = 1;
@@ -99,6 +158,9 @@ function saveDatedWesternFile(content) {
   console.log(`✅ Saved dated western file: ${filePath}`);
 }
 
+/* --------------------------
+   asyncPool
+   -------------------------- */
 function asyncPool(poolLimit, array, iteratorFn) {
   let i = 0;
   const ret = [];
@@ -123,78 +185,93 @@ function asyncPool(poolLimit, array, iteratorFn) {
   return enqueue().then(() => Promise.all(ret));
 }
 
-/**
- * Transform full detail object into minimal object the user requested:
- * {
- *   name,
- *   image,
- *   id,
- *   set: { id, name },
- *   cardmarket: { ... } (pricing.cardmarket or {})
- *   tcgplayer: { ... } (pricing.tcgplayer or {})
- * }
- *
- * Rules implemented:
- * - If pricing.cardmarket.idProduct exists, use it as top-level id (number). Otherwise fall back to originalId (cel25-1 etc).
- * - image: if present as string -> append "/high.webp" (only once). If array -> map each and append. If absent -> null.
- */
-function transformDetails(details, originalId) {
-  if (!details || typeof details !== 'object') return null;
-
-  // get cardmarket and tcgplayer pricing objects (may be undefined)
-  const pricing = details.pricing || {};
-  const cardmarket = pricing.cardmarket || {};
-  const tcgplayer = pricing.tcgplayer || {};
-
-  // determine top-level id: prefer cardmarket.idProduct if available
-  let topId = null;
-  if (cardmarket && (cardmarket.idProduct || cardmarket.idProduct === 0)) {
-    topId = cardmarket.idProduct;
-  } else if (details.id) {
-    topId = details.id;
-  } else {
-    topId = originalId || null;
-  }
-
-  // normalize image(s) and append "/high.webp" when appropriate
-  const appendHigh = (img) => {
-    if (!img) return null;
-    if (typeof img !== 'string') return null;
-    // avoid double-appending if already ends with "/high.webp"
-    if (img.endsWith('/high.webp')) return img;
-    // remove trailing slashes
-    let trimmed = img.replace(/\/+$/, '');
-    return `${trimmed}/high.webp`;
-  };
-
-  let imageField = null;
-  if (Array.isArray(details.image)) {
-    const mapped = details.image.map(appendHigh).filter(Boolean);
-    imageField = mapped.length ? mapped : null;
-  } else if (typeof details.image === 'string') {
-    imageField = appendHigh(details.image);
-  } else if (details.image && typeof details.image === 'object' && details.image.small) {
-    // if image is an object with urls, prefer a sensible one
-    imageField = appendHigh(details.image.small) || appendHigh(details.image.large) || null;
-  } else {
-    imageField = null;
-  }
-
-  const out = {
-    name: details.name ?? null,
-    image: imageField,
-    id: topId,
-    set: {
-      id: details.set && details.set.id ? details.set.id : null,
-      name: details.set && details.set.name ? details.set.name : null
-    },
-    cardmarket: cardmarket,
-    tcgplayer: tcgplayer
-  };
-
-  return out;
+/* --------------------------
+   Conversion helpers
+   -------------------------- */
+function isGzFile(fn) {
+  return fn.endsWith('.json.gz');
 }
 
+function walkDir(dir) {
+  const res = [];
+  if (!fs.existsSync(dir)) return res;
+  for (const e of fs.readdirSync(dir)) {
+    const p = path.join(dir, e);
+    const st = fs.statSync(p);
+    if (st.isDirectory()) res.push(...walkDir(p));
+    else if (st.isFile() && isGzFile(p)) res.push(p);
+  }
+  return res;
+}
+
+function unzipJson(gzPath) {
+  const buf = fs.readFileSync(gzPath);
+  const jsonBuf = zlib.gunzipSync(buf);
+  return JSON.parse(jsonBuf.toString('utf8'));
+}
+
+function gzipJson(obj) {
+  const json = JSON.stringify(obj, null, 2);
+  return zlib.gzipSync(Buffer.from(json, 'utf8'));
+}
+
+function looksLikeLegacyEntry(item) {
+  if (!item || typeof item !== 'object') return false;
+  if ('pricing' in item) return true;
+  const legacyHints = ['attacks', 'hp', 'types', 'rarity', 'stage', 'retreat', 'dexId'];
+  for (const h of legacyHints) if (h in item) return true;
+  if ('cardmarket' in item || 'tcgplayer' in item) return false;
+  return false;
+}
+
+/* convertSingleFile - overwrites without backup */
+function convertSingleFile(filePath) {
+  try {
+    const parsed = unzipJson(filePath);
+    let arr = null;
+    if (Array.isArray(parsed)) arr = parsed;
+    else if (parsed && Array.isArray(parsed.cards)) arr = parsed.cards;
+    else {
+      console.log(`  - Skipping ${filePath}: not an array and does not contain .cards array.`);
+      return { skipped: true };
+    }
+
+    const someLegacy = arr.some(looksLikeLegacyEntry);
+    if (!someLegacy) {
+      console.log(`  - Skipping ${filePath}: already looks converted.`);
+      return { skipped: true };
+    }
+
+    const out = [];
+    for (let i = 0; i < arr.length; i++) {
+      const item = arr[i];
+      if (looksLikeLegacyEntry(item)) {
+        const originalId = item.id || null;
+        const t = transformDetails(item, originalId);
+        if (t) out.push(t);
+        else {
+          console.warn(`    ✖ Item ${i} transform returned null -> skipping`);
+        }
+      } else {
+        out.push(item);
+      }
+    }
+
+    console.log(`  - Converting ${filePath} (${out.length}/${arr.length} items).`);
+
+    const gz = gzipJson(out);
+    fs.writeFileSync(filePath, gz);
+    console.log(`    ✅ Converted and overwritten (no backup).`);
+    return { converted: true };
+  } catch (err) {
+    console.error(`    💥 Error converting ${filePath}:`, err && err.stack ? err.stack : err);
+    return { error: true };
+  }
+}
+
+/* --------------------------
+   Main flow (automatic conversion)
+   -------------------------- */
 async function main() {
   try {
     console.log("📦 Loading baza.json.gz...");
@@ -216,9 +293,7 @@ async function main() {
       processed++;
       if (processed % 500 === 0) console.log(`✔ processed ${processed}/${ids.length}`);
       if (RATE_LIMIT_DELAY) await sleep(RATE_LIMIT_DELAY);
-      if (details) {
-        return transformDetails(details, id);
-      }
+      if (details) return transformDetails(details, id);
       console.warn(`⚠️ Missing details for id=${id} (skipping)`);
       return null;
     });
@@ -229,8 +304,25 @@ async function main() {
     } catch (err) {
       console.error("⚠️ Failed to save dated EN file:", err);
     }
+
+    // === AUTOMATIC: convert existing files under en/*/*.json.gz ===
+    console.log('\n🔁 Automatic conversion: scanning all existing en/*/*.json.gz files...');
+    const files = walkDir(ROOT_EN_DIR);
+    console.log(`Found ${files.length} .json.gz files under ${ROOT_EN_DIR}`);
+
+    for (const filePath of files) {
+      console.log('➡️', filePath);
+      try {
+        convertSingleFile(filePath);
+      } catch (e) {
+        console.error('  💥 Error during convertSingleFile:', e && e.stack ? e.stack : e);
+      }
+    }
+
+    console.log('\nConversion pass finished.');
+    console.log('\nAll done.');
   } catch (err) {
-    console.error("💥 Fatal error:", err);
+    console.error("💥 Fatal error:", err && err.stack ? err.stack : err);
     process.exit(1);
   }
 }
