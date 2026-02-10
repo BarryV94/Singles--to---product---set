@@ -1,3 +1,4 @@
+// build-western.js
 const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
@@ -26,7 +27,10 @@ async function fetchCardDetails(cardId) {
         console.warn(`tcgdex.client failed for id=${cardId}: ${err && err.message ? err.message : err}`);
       }
     }
-  } catch (e) {}
+  } catch (e) {
+    // ignore: tcgdex package not available — fall back to fetch
+  }
+
   const hasPercentEncoding = /%[0-9A-Fa-f]{2}/.test(cardId);
   const safeId = hasPercentEncoding ? cardId : encodeURIComponent(cardId);
   for (let attempt = 1; attempt <= 3; attempt++) {
@@ -119,6 +123,78 @@ function asyncPool(poolLimit, array, iteratorFn) {
   return enqueue().then(() => Promise.all(ret));
 }
 
+/**
+ * Transform full detail object into minimal object the user requested:
+ * {
+ *   name,
+ *   image,
+ *   id,
+ *   set: { id, name },
+ *   cardmarket: { ... } (pricing.cardmarket or {})
+ *   tcgplayer: { ... } (pricing.tcgplayer or {})
+ * }
+ *
+ * Rules implemented:
+ * - If pricing.cardmarket.idProduct exists, use it as top-level id (number). Otherwise fall back to originalId (cel25-1 etc).
+ * - image: if present as string -> append "/high.webp" (only once). If array -> map each and append. If absent -> null.
+ */
+function transformDetails(details, originalId) {
+  if (!details || typeof details !== 'object') return null;
+
+  // get cardmarket and tcgplayer pricing objects (may be undefined)
+  const pricing = details.pricing || {};
+  const cardmarket = pricing.cardmarket || {};
+  const tcgplayer = pricing.tcgplayer || {};
+
+  // determine top-level id: prefer cardmarket.idProduct if available
+  let topId = null;
+  if (cardmarket && (cardmarket.idProduct || cardmarket.idProduct === 0)) {
+    topId = cardmarket.idProduct;
+  } else if (details.id) {
+    topId = details.id;
+  } else {
+    topId = originalId || null;
+  }
+
+  // normalize image(s) and append "/high.webp" when appropriate
+  const appendHigh = (img) => {
+    if (!img) return null;
+    if (typeof img !== 'string') return null;
+    // avoid double-appending if already ends with "/high.webp"
+    if (img.endsWith('/high.webp')) return img;
+    // remove trailing slashes
+    let trimmed = img.replace(/\/+$/, '');
+    return `${trimmed}/high.webp`;
+  };
+
+  let imageField = null;
+  if (Array.isArray(details.image)) {
+    const mapped = details.image.map(appendHigh).filter(Boolean);
+    imageField = mapped.length ? mapped : null;
+  } else if (typeof details.image === 'string') {
+    imageField = appendHigh(details.image);
+  } else if (details.image && typeof details.image === 'object' && details.image.small) {
+    // if image is an object with urls, prefer a sensible one
+    imageField = appendHigh(details.image.small) || appendHigh(details.image.large) || null;
+  } else {
+    imageField = null;
+  }
+
+  const out = {
+    name: details.name ?? null,
+    image: imageField,
+    id: topId,
+    set: {
+      id: details.set && details.set.id ? details.set.id : null,
+      name: details.set && details.set.name ? details.set.name : null
+    },
+    cardmarket: cardmarket,
+    tcgplayer: tcgplayer
+  };
+
+  return out;
+}
+
 async function main() {
   try {
     console.log("📦 Loading baza.json.gz...");
@@ -140,12 +216,14 @@ async function main() {
       processed++;
       if (processed % 500 === 0) console.log(`✔ processed ${processed}/${ids.length}`);
       if (RATE_LIMIT_DELAY) await sleep(RATE_LIMIT_DELAY);
-      if (details) return details;
+      if (details) {
+        return transformDetails(details, id);
+      }
       console.warn(`⚠️ Missing details for id=${id} (skipping)`);
       return null;
     });
     const western = results.filter(Boolean);
-    console.log(`✅ DONE – collected ${western.length} detailed cards. Now saving dated file...`);
+    console.log(`✅ DONE – collected ${western.length} simplified card entries. Now saving dated file...`);
     try {
       saveDatedWesternFile(western);
     } catch (err) {
