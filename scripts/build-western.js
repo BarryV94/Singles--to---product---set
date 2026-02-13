@@ -1,6 +1,7 @@
 // build-western.js
-// Updated: saves dated western_*.json.gz into en/<YEAR>/<N>/western_DD_MM_YYYY.json.gz
-// Also migrates existing numeric folders (en/1, en/2, ...) into year folders when possible.
+// Zapisuje dated files do en/<ROK>/ (bez numerowanych podfolderów).
+// Migracja przenosi wszystkie istniejące .json.gz do en/<ROK>/ na podstawie
+// roku w nazwie pliku (_YYYY.json.gz) lub z mtime pliku (jeśli nazwa nie zawiera roku).
 
 const fs = require('fs');
 const path = require('path');
@@ -10,7 +11,6 @@ const BASE_PATH = path.resolve("baza.json.gz");
 const ROOT_EN_DIR = path.resolve("en");
 const BASE_URL = "https://api.tcgdex.net/v2/en/cards";
 const RATE_LIMIT_DELAY = 0;
-const MAX_FILES_PER_SUBFOLDER = 999;
 const CONCURRENCY = 40;
 
 function sleep(ms) {
@@ -31,7 +31,7 @@ async function fetchCardDetails(cardId) {
       }
     }
   } catch (e) {
-    // ignore: tcgdex package not available — fall back to fetch
+    // ignore
   }
 
   const hasPercentEncoding = /%[0-9A-Fa-f]{2}/.test(cardId);
@@ -71,7 +71,6 @@ function transformDetails(details, originalId) {
   const cardmarket = pricing.cardmarket || {};
   const tcgplayer = pricing.tcgplayer || {};
 
-  // choose top-level id: cardmarket.idProduct if present; else details.id; else originalId
   let topId = null;
   if (cardmarket && (cardmarket.idProduct || cardmarket.idProduct === 0)) {
     topId = cardmarket.idProduct;
@@ -152,47 +151,29 @@ function walkDir(dir) {
 }
 
 /* --------------------------
-   Helpers to find/create numeric subfolders with capacity
-   e.g. en/2025/1, en/2025/2, ...
+   Helpers for unique filenames
    -------------------------- */
-function ensureNumericSubfolderWithCapacity(baseFolder) {
-  fs.mkdirSync(baseFolder, { recursive: true });
-  // find existing numeric subfolders
-  const entries = fs.readdirSync(baseFolder).filter(n => {
-    const full = path.join(baseFolder, n);
-    try {
-      return fs.statSync(full).isDirectory() && /^\d+$/.test(n);
-    } catch { return false; }
-  }).map(Number).sort((a,b) => a - b);
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
 
-  let idx = 1;
-  if (entries.length === 0) {
-    idx = 1;
-    const folder = path.join(baseFolder, String(idx));
-    fs.mkdirSync(folder, { recursive: true });
-    return folder;
+function getUniquePath(dir, filename) {
+  let target = path.join(dir, filename);
+  if (!fs.existsSync(target)) return target;
+  const base = filename.replace(/\.json\.gz$/, '');
+  let i = 1;
+  while (true) {
+    const candidate = `${base}-dup${i}.json.gz`;
+    const cpath = path.join(dir, candidate);
+    if (!fs.existsSync(cpath)) return cpath;
+    i++;
   }
-
-  for (const n of entries) {
-    const folder = path.join(baseFolder, String(n));
-    const files = fs.readdirSync(folder).filter(f => {
-      try { return fs.statSync(path.join(folder, f)).isFile(); } catch { return false; }
-    });
-    if (files.length < MAX_FILES_PER_SUBFOLDER) return folder;
-  }
-
-  // all existing full -> create new index
-  idx = entries[entries.length - 1] + 1;
-  const newFolder = path.join(baseFolder, String(idx));
-  fs.mkdirSync(newFolder, { recursive: true });
-  return newFolder;
 }
 
 /* --------------------------
-   save dated file into YEAR folder structure
+   save dated file into en/<YEAR>/
    -------------------------- */
 function saveDatedWesternFile(content) {
-  fs.mkdirSync(ROOT_EN_DIR, { recursive: true });
   const now = new Date();
   const yearStr = String(now.getFullYear());
   const dateStrDots = new Intl.DateTimeFormat("pl-PL", {
@@ -205,98 +186,123 @@ function saveDatedWesternFile(content) {
   const fileName = `western_${dateStr}.json.gz`;
 
   const yearBase = path.join(ROOT_EN_DIR, yearStr);
-  const targetFolder = ensureNumericSubfolderWithCapacity(yearBase);
-  const filePath = path.join(targetFolder, fileName);
+  ensureDir(yearBase);
+  const filePath = getUniquePath(yearBase, fileName);
   const gz = gzipJson(content);
   fs.writeFileSync(filePath, gz);
   console.log(`✅ Saved dated western file: ${filePath}`);
 }
 
 /* --------------------------
-   Migration: move existing numeric top-level folders into year folders
-   - Looks for en/<num> directories (e.g. en/1, en/2, ...)
-   - For each .json.gz file inside, tries to extract year from filename
-     pattern *_YYYY.json.gz (fallback to mtime year)
-   - Moves file to en/<YYYY>/<n>/filename (creates numeric subfolders as needed)
-   - Removes empty source directories
+   Migration: move ALL .json.gz under en/... into en/<YEAR>/
+   - For each file: determine year from filename *_YYYY.json.gz or fallback to mtime year
+   - Move file into en/<YEAR>/ (no numeric subfolders)
+   - Avoid overwriting by adding -dupN suffix when needed
+   - Remove empty dirs after moving
    -------------------------- */
-function migrateExistingNumericFolders() {
+function migrateAllToYearFolders() {
   if (!fs.existsSync(ROOT_EN_DIR)) return;
-  const topEntries = fs.readdirSync(ROOT_EN_DIR);
-  const numericTopFolders = topEntries.filter(n => /^\d+$/.test(n));
-  if (numericTopFolders.length === 0) {
-    console.log('🔁 No numeric top-level folders to migrate.');
+  const allFiles = walkDir(ROOT_EN_DIR);
+  if (allFiles.length === 0) {
+    console.log('🔁 Brak plików .json.gz do migracji pod', ROOT_EN_DIR);
     return;
   }
 
-  console.log(`🔁 Migrating ${numericTopFolders.length} numeric folder(s) into year-based layout...`);
+  console.log(`🔁 Migrating ${allFiles.length} .json.gz files into year-based roots (en/<YEAR>/)...`);
 
-  for (const folderName of numericTopFolders) {
-    const fullFolder = path.join(ROOT_EN_DIR, folderName);
-    const files = walkDir(fullFolder);
-    if (files.length === 0) {
-      // try to remove empty folder
-      try { fs.rmdirSync(fullFolder); console.log(`  - Removed empty folder ${fullFolder}`); } catch (e) {}
+  for (const filePath of allFiles) {
+    const filename = path.basename(filePath);
+    // if file is already directly under a year root (en/<YEAR>/filename), skip moving
+    const parts = path.relative(ROOT_EN_DIR, filePath).split(path.sep); // e.g. ['2026','1','western_...']
+    let currentYearDir = null;
+    if (parts.length >= 2 && /^\d{4}$/.test(parts[0]) && parts[1] === filename) {
+      // path like en/2026/western_...  (already correct)
+      currentYearDir = parts[0];
+    } else if (parts.length >= 1 && /^\d{4}$/.test(parts[0]) && parts.length === 1) {
+      // unlikely: file directly en/2026 (filename equals '2026'?) skip
+      currentYearDir = parts[0];
+    } else {
+      currentYearDir = null;
+    }
+
+    // Determine intended year
+    let year = null;
+    const m = filename.match(/_(\d{4})\.json\.gz$/);
+    if (m) year = m[1];
+    else {
+      try {
+        const st = fs.statSync(filePath);
+        year = String(new Date(st.mtime).getFullYear());
+      } catch (e) {
+        year = String(new Date().getFullYear());
+      }
+    }
+
+    const desiredDir = path.join(ROOT_EN_DIR, year);
+    ensureDir(desiredDir);
+
+    // If file already resides directly under desiredDir, skip
+    const parentDir = path.dirname(filePath);
+    if (path.resolve(parentDir) === path.resolve(desiredDir)) {
+      // already correct location
       continue;
     }
 
-    for (const filePath of files) {
-      const filename = path.basename(filePath);
-      let year = null;
-      const m = filename.match(/_(\d{4})\.json\.gz$/);
-      if (m) year = m[1];
-      else {
-        try {
-          const st = fs.statSync(filePath);
-          year = String(new Date(st.mtime).getFullYear());
-        } catch (e) {
-          year = String(new Date().getFullYear());
-        }
-      }
-
-      const yearBase = path.join(ROOT_EN_DIR, year);
-      const targetSub = ensureNumericSubfolderWithCapacity(yearBase);
-      let targetPath = path.join(targetSub, filename);
-
-      // avoid overwriting existing files: if exists, append suffix
-      if (fs.existsSync(targetPath)) {
-        const base = filename.replace(/\.json\.gz$/, '');
-        let i = 1;
-        do {
-          const candidate = `${base}-dup${i}.json.gz`;
-          targetPath = path.join(targetSub, candidate);
-          i++;
-        } while (fs.existsSync(targetPath));
-      }
-
+    // create unique target path
+    const targetPath = getUniquePath(desiredDir, filename);
+    try {
+      // ensure target dir exists (done above)
+      fs.renameSync(filePath, targetPath);
+      console.log(`  - Moved ${filePath} → ${targetPath}`);
+    } catch (e) {
+      // fallback to copy+unlink if rename fails across filesystems
       try {
-        fs.renameSync(filePath, targetPath);
-        console.log(`  - Moved ${filePath} → ${targetPath}`);
-      } catch (e) {
-        console.error(`  ✖ Failed to move ${filePath}:`, e && e.message ? e.message : e);
+        fs.copyFileSync(filePath, targetPath);
+        fs.unlinkSync(filePath);
+        console.log(`  - Copied (fallback) ${filePath} → ${targetPath}`);
+      } catch (err) {
+        console.error(`  ✖ Failed to move ${filePath} → ${targetPath}:`, err && err.message ? err.message : err);
       }
     }
+  }
 
-    // try to remove source folder tree if empty
+  // Remove empty directories under ROOT_EN_DIR (but keep year directories)
+  function removeEmptyDirsRecursively(dir) {
+    if (!fs.existsSync(dir)) return;
+    for (const entry of fs.readdirSync(dir)) {
+      const full = path.join(dir, entry);
+      try {
+        if (fs.statSync(full).isDirectory()) {
+          removeEmptyDirsRecursively(full);
+          const contents = fs.readdirSync(full);
+          if (contents.length === 0) {
+            fs.rmdirSync(full);
+            console.log(`  - Removed empty folder ${full}`);
+          }
+        }
+      } catch (e) {}
+    }
+  }
+
+  // remove only non-year empty dirs (i.e., skip removing en/<YEAR> even if empty)
+  const topEntries = fs.readdirSync(ROOT_EN_DIR);
+  for (const e of topEntries) {
+    const full = path.join(ROOT_EN_DIR, e);
     try {
-      // recursive remove empty dirs under fullFolder
-      const removeIfEmpty = (p) => {
-        if (!fs.existsSync(p)) return;
-        const entries = fs.readdirSync(p);
-        for (const e of entries) {
-          const child = path.join(p, e);
-          try {
-            if (fs.statSync(child).isDirectory()) removeIfEmpty(child);
-          } catch {}
-        }
-        // re-check
-        const rem = fs.readdirSync(p);
-        if (rem.length === 0) {
-          try { fs.rmdirSync(p); console.log(`  - Removed empty folder ${p}`); } catch (e) {}
-        }
-      };
-      removeIfEmpty(fullFolder);
-    } catch (e) {}
+      if (fs.statSync(full).isDirectory() && !/^\d{4}$/.test(e)) {
+        removeEmptyDirsRecursively(full);
+        try {
+          const after = fs.readdirSync(full);
+          if (after.length === 0) {
+            fs.rmdirSync(full);
+            console.log(`  - Removed empty top folder ${full}`);
+          }
+        } catch (e) {}
+      } else if (fs.statSync(full).isDirectory() && /^\d{4}$/.test(e)) {
+        // remove nested empties inside year dir, but keep the year root
+        removeEmptyDirsRecursively(full);
+      }
+    } catch (err) {}
   }
 }
 
@@ -339,7 +345,6 @@ function looksLikeLegacyEntry(item) {
   return false;
 }
 
-/* convertSingleFile - overwrites without backup */
 function convertSingleFile(filePath) {
   try {
     const parsed = unzipJson(filePath);
@@ -385,7 +390,7 @@ function convertSingleFile(filePath) {
 }
 
 /* --------------------------
-   Main flow (automatic conversion)
+   Main flow
    -------------------------- */
 async function main() {
   try {
@@ -420,8 +425,8 @@ async function main() {
       console.error("⚠️ Failed to save dated EN file:", err);
     }
 
-    // === AUTOMATIC: migrate existing numeric folders into year-based layout ===
-    migrateExistingNumericFolders();
+    // === MIGRATE ALL EXISTING FILES into en/<YEAR>/ (no numeric subfolders) ===
+    migrateAllToYearFolders();
 
     // === AUTOMATIC: convert existing files under en/*/*.json.gz ===
     console.log('\n🔁 Automatic conversion: scanning all existing en/*/*.json.gz files...');
