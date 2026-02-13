@@ -1,7 +1,7 @@
 // build-western.js
-// Updated: saves dated western_*.json.gz into en/<YEAR>/ (no numeric subfolders)
-// Migration moves existing .json.gz files into en/<YEAR>/ without renaming (skips on conflict).
-// Supports --dry-run to preview migration actions (does not move files when --dry-run present).
+// Zapisuje dated files do en/<ROK>/ (bez numerowanych podfolderów).
+// Migracja przenosi wszystkie istniejące .json.gz do en/<ROK>/ na podstawie
+// roku w nazwie pliku (_YYYY.json.gz) lub z mtime pliku (jeśli nazwa nie zawiera roku).
 
 const fs = require('fs');
 const path = require('path');
@@ -12,9 +12,10 @@ const ROOT_EN_DIR = path.resolve("en");
 const BASE_URL = "https://api.tcgdex.net/v2/en/cards";
 const RATE_LIMIT_DELAY = 0;
 const CONCURRENCY = 40;
-const DRY_RUN = process.argv.includes('--dry-run');
 
-function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 async function fetchCardDetails(cardId) {
   if (!cardId) return null;
@@ -30,7 +31,7 @@ async function fetchCardDetails(cardId) {
       }
     }
   } catch (e) {
-    // ignore: tcgdex package not available — fall back to fetch
+    // ignore
   }
 
   const hasPercentEncoding = /%[0-9A-Fa-f]{2}/.test(cardId);
@@ -39,10 +40,19 @@ async function fetchCardDetails(cardId) {
     try {
       const res = await fetch(`${BASE_URL}/${safeId}`);
       if (res.ok) {
-        try { return await res.json(); } catch { return null; }
+        try {
+          return await res.json();
+        } catch {
+          return null;
+        }
       }
-      if (res.status === 400 || res.status === 404) return null;
-      if (res.status >= 429) { await sleep(300 * attempt); continue; }
+      if (res.status === 400 || res.status === 404) {
+        return null;
+      }
+      if (res.status >= 429) {
+        await sleep(300 * attempt);
+        continue;
+      }
       return null;
     } catch {
       await sleep(300 * attempt);
@@ -62,14 +72,18 @@ function transformDetails(details, originalId) {
   const tcgplayer = pricing.tcgplayer || {};
 
   let topId = null;
-  if (cardmarket && (cardmarket.idProduct || cardmarket.idProduct === 0)) topId = cardmarket.idProduct;
-  else if (details.id) topId = details.id;
-  else topId = originalId || null;
+  if (cardmarket && (cardmarket.idProduct || cardmarket.idProduct === 0)) {
+    topId = cardmarket.idProduct;
+  } else if (details.id) {
+    topId = details.id;
+  } else {
+    topId = originalId || null;
+  }
 
   const appendHigh = (img) => {
     if (!img || typeof img !== 'string') return null;
     if (img.endsWith('/high.webp')) return img;
-    const trimmed = img.replace(/\/+$/, '');
+    let trimmed = img.replace(/\/+$/, '');
     return `${trimmed}/high.webp`;
   };
 
@@ -77,9 +91,13 @@ function transformDetails(details, originalId) {
   if (Array.isArray(details.image)) {
     const mapped = details.image.map(appendHigh).filter(Boolean);
     imageField = mapped.length ? mapped : null;
-  } else if (typeof details.image === 'string') imageField = appendHigh(details.image);
-  else if (details.image && typeof details.image === 'object') imageField = appendHigh(details.image.small) || appendHigh(details.image.large) || null;
-  else imageField = null;
+  } else if (typeof details.image === 'string') {
+    imageField = appendHigh(details.image);
+  } else if (details.image && typeof details.image === 'object' && (details.image.small || details.image.large)) {
+    imageField = appendHigh(details.image.small) || appendHigh(details.image.large) || null;
+  } else {
+    imageField = null;
+  }
 
   return {
     name: details.name ?? null,
@@ -102,19 +120,30 @@ function unzipJson(gzPath) {
   const jsonBuf = zlib.gunzipSync(buf);
   return JSON.parse(jsonBuf.toString('utf8'));
 }
-function gzipJson(obj) { return zlib.gzipSync(Buffer.from(JSON.stringify(obj, null, 2), 'utf8')); }
+
+function gzipJson(obj) {
+  const json = JSON.stringify(obj, null, 2);
+  return zlib.gzipSync(Buffer.from(json, 'utf8'));
+}
 
 /* --------------------------
    walkDir: collect .json.gz files recursively
    -------------------------- */
-function isGzFile(fn) { return fn.endsWith('.json.gz'); }
+function isGzFile(fn) {
+  return fn.endsWith('.json.gz');
+}
+
 function walkDir(dir) {
   const res = [];
   if (!fs.existsSync(dir)) return res;
   for (const e of fs.readdirSync(dir)) {
     const p = path.join(dir, e);
     let st;
-    try { st = fs.statSync(p); } catch { continue; }
+    try {
+      st = fs.statSync(p);
+    } catch (err) {
+      continue;
+    }
     if (st.isDirectory()) res.push(...walkDir(p));
     else if (st.isFile() && isGzFile(p)) res.push(p);
   }
@@ -122,22 +151,31 @@ function walkDir(dir) {
 }
 
 /* --------------------------
-   Helpers for filesystem
+   Helpers for unique filenames
    -------------------------- */
-function ensureDir(dir) { fs.mkdirSync(dir, { recursive: true }); }
-function getYearFromFilenameOrMtime(filename, filePath) {
-  const m = filename.match(/_(\d{4})\.json\.gz$/);
-  if (m) return m[1];
-  try { const st = fs.statSync(filePath); return String(new Date(st.mtime).getFullYear()); } catch { return String(new Date().getFullYear()); }
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
+
+function getUniquePath(dir, filename) {
+  let target = path.join(dir, filename);
+  if (!fs.existsSync(target)) return target;
+  const base = filename.replace(/\.json\.gz$/, '');
+  let i = 1;
+  while (true) {
+    const candidate = `${base}-dup${i}.json.gz`;
+    const cpath = path.join(dir, candidate);
+    if (!fs.existsSync(cpath)) return cpath;
+    i++;
+  }
 }
 
 /* --------------------------
    save dated file into en/<YEAR>/
-   uses Europe/Warsaw for date string and year
    -------------------------- */
 function saveDatedWesternFile(content) {
   const now = new Date();
-  // use Warsaw timezone for the date string and year
+  const yearStr = String(now.getFullYear());
   const dateStrDots = new Intl.DateTimeFormat("pl-PL", {
     timeZone: "Europe/Warsaw",
     day: "2-digit",
@@ -147,80 +185,88 @@ function saveDatedWesternFile(content) {
   const dateStr = dateStrDots.replace(/\./g, "_");
   const fileName = `western_${dateStr}.json.gz`;
 
-  const yearStr = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Warsaw', year: 'numeric' }).format(now);
   const yearBase = path.join(ROOT_EN_DIR, yearStr);
   ensureDir(yearBase);
-  const filePath = path.join(yearBase, fileName);
-  if (fs.existsSync(filePath)) {
-    // try to avoid accidental overwrite by adding timestamp suffix when *same exact name* exists
-    const alt = fileName.replace(/\.json\.gz$/, `_${Date.now()}.json.gz`);
-    const altPath = path.join(yearBase, alt);
-    console.warn(`Target exists ${filePath} — writing as ${altPath}`);
-    if (!DRY_RUN) fs.writeFileSync(altPath, gzipJson(content));
-    console.log(`✅ Saved dated western file: ${DRY_RUN ? '[dry-run] ' : ''}${altPath}`);
-    return altPath;
-  }
-
-  if (!DRY_RUN) fs.writeFileSync(filePath, gzipJson(content));
-  console.log(`✅ Saved dated western file: ${DRY_RUN ? '[dry-run] ' : ''}${filePath}`);
-  return filePath;
+  const filePath = getUniquePath(yearBase, fileName);
+  const gz = gzipJson(content);
+  fs.writeFileSync(filePath, gz);
+  console.log(`✅ Saved dated western file: ${filePath}`);
 }
 
 /* --------------------------
    Migration: move ALL .json.gz under en/... into en/<YEAR>/
-   - Does NOT rename files. If target exists, skip and log.
-   - If --dry-run is provided the actions are only printed.
+   - For each file: determine year from filename *_YYYY.json.gz or fallback to mtime year
+   - Move file into en/<YEAR>/ (no numeric subfolders)
+   - Avoid overwriting by adding -dupN suffix when needed
+   - Remove empty dirs after moving
    -------------------------- */
-function migrateAllToYearFolders_NoRename() {
+function migrateAllToYearFolders() {
   if (!fs.existsSync(ROOT_EN_DIR)) return;
   const allFiles = walkDir(ROOT_EN_DIR);
   if (allFiles.length === 0) {
-    console.log('🔁 No .json.gz files found to migrate under', ROOT_EN_DIR);
+    console.log('🔁 Brak plików .json.gz do migracji pod', ROOT_EN_DIR);
     return;
   }
 
-  console.log(`🔁 Migrating ${allFiles.length} .json.gz files into en/<YEAR>/ (no renames)${DRY_RUN ? ' [dry-run]' : ''}...`);
+  console.log(`🔁 Migrating ${allFiles.length} .json.gz files into year-based roots (en/<YEAR>/)...`);
 
   for (const filePath of allFiles) {
     const filename = path.basename(filePath);
-    // Skip files that are already directly under a year root: en/<YYYY>/<filename>
-    const rel = path.relative(ROOT_EN_DIR, filePath).split(path.sep);
-    if (rel.length === 2 && /^\d{4}$/.test(rel[0])) {
-      // already in en/<YEAR>/file.ext
-      continue;
+    // if file is already directly under a year root (en/<YEAR>/filename), skip moving
+    const parts = path.relative(ROOT_EN_DIR, filePath).split(path.sep); // e.g. ['2026','1','western_...']
+    let currentYearDir = null;
+    if (parts.length >= 2 && /^\d{4}$/.test(parts[0]) && parts[1] === filename) {
+      // path like en/2026/western_...  (already correct)
+      currentYearDir = parts[0];
+    } else if (parts.length >= 1 && /^\d{4}$/.test(parts[0]) && parts.length === 1) {
+      // unlikely: file directly en/2026 (filename equals '2026'?) skip
+      currentYearDir = parts[0];
+    } else {
+      currentYearDir = null;
     }
 
-    const year = getYearFromFilenameOrMtime(filename, filePath);
+    // Determine intended year
+    let year = null;
+    const m = filename.match(/_(\d{4})\.json\.gz$/);
+    if (m) year = m[1];
+    else {
+      try {
+        const st = fs.statSync(filePath);
+        year = String(new Date(st.mtime).getFullYear());
+      } catch (e) {
+        year = String(new Date().getFullYear());
+      }
+    }
+
     const desiredDir = path.join(ROOT_EN_DIR, year);
     ensureDir(desiredDir);
 
-    const targetPath = path.join(desiredDir, filename);
-    if (path.resolve(path.dirname(filePath)) === path.resolve(desiredDir)) {
-      continue; // already in correct folder
+    // If file already resides directly under desiredDir, skip
+    const parentDir = path.dirname(filePath);
+    if (path.resolve(parentDir) === path.resolve(desiredDir)) {
+      // already correct location
+      continue;
     }
 
-    if (fs.existsSync(targetPath)) {
-      console.log(`SKIP (target exists): ${filePath} -> ${targetPath}`);
-      continue; // do not rename or overwrite
-    }
-
-    console.log(`${DRY_RUN ? '[DRY] ' : ''}Move: ${filePath} -> ${targetPath}`);
-    if (!DRY_RUN) {
+    // create unique target path
+    const targetPath = getUniquePath(desiredDir, filename);
+    try {
+      // ensure target dir exists (done above)
+      fs.renameSync(filePath, targetPath);
+      console.log(`  - Moved ${filePath} → ${targetPath}`);
+    } catch (e) {
+      // fallback to copy+unlink if rename fails across filesystems
       try {
-        fs.renameSync(filePath, targetPath);
-      } catch (e) {
-        // fallback copy+unlink across filesystems
-        try {
-          fs.copyFileSync(filePath, targetPath);
-          fs.unlinkSync(filePath);
-        } catch (err) {
-          console.error(`  ✖ Failed to move ${filePath} -> ${targetPath}:`, err && err.message ? err.message : err);
-        }
+        fs.copyFileSync(filePath, targetPath);
+        fs.unlinkSync(filePath);
+        console.log(`  - Copied (fallback) ${filePath} → ${targetPath}`);
+      } catch (err) {
+        console.error(`  ✖ Failed to move ${filePath} → ${targetPath}:`, err && err.message ? err.message : err);
       }
     }
   }
 
-  // Clean up empty directories except year roots
+  // Remove empty directories under ROOT_EN_DIR (but keep year directories)
   function removeEmptyDirsRecursively(dir) {
     if (!fs.existsSync(dir)) return;
     for (const entry of fs.readdirSync(dir)) {
@@ -230,17 +276,15 @@ function migrateAllToYearFolders_NoRename() {
           removeEmptyDirsRecursively(full);
           const contents = fs.readdirSync(full);
           if (contents.length === 0) {
-            // do not remove year roots (4-digit names) at this stage
-            if (!/^\d{4}$/.test(path.basename(full))) {
-              try { fs.rmdirSync(full); console.log(`  - Removed empty folder ${full}`); } catch (e) {}
-            }
+            fs.rmdirSync(full);
+            console.log(`  - Removed empty folder ${full}`);
           }
         }
       } catch (e) {}
     }
   }
 
-  // perform cleanup for non-year directories
+  // remove only non-year empty dirs (i.e., skip removing en/<YEAR> even if empty)
   const topEntries = fs.readdirSync(ROOT_EN_DIR);
   for (const e of topEntries) {
     const full = path.join(ROOT_EN_DIR, e);
@@ -250,11 +294,12 @@ function migrateAllToYearFolders_NoRename() {
         try {
           const after = fs.readdirSync(full);
           if (after.length === 0) {
-            try { fs.rmdirSync(full); console.log(`  - Removed empty top folder ${full}`); } catch (e) {}
+            fs.rmdirSync(full);
+            console.log(`  - Removed empty top folder ${full}`);
           }
-        } catch (er) {}
+        } catch (e) {}
       } else if (fs.statSync(full).isDirectory() && /^\d{4}$/.test(e)) {
-        // remove nested empties inside year root
+        // remove nested empties inside year dir, but keep the year root
         removeEmptyDirsRecursively(full);
       }
     } catch (err) {}
@@ -265,13 +310,21 @@ function migrateAllToYearFolders_NoRename() {
    asyncPool
    -------------------------- */
 function asyncPool(poolLimit, array, iteratorFn) {
-  let i = 0; const ret = []; const executing = [];
+  let i = 0;
+  const ret = [];
+  const executing = [];
   const enqueue = () => {
     if (i === array.length) return Promise.resolve();
     const item = array[i++];
     const p = Promise.resolve().then(() => iteratorFn(item));
     ret.push(p);
-    const e = p.then(() => { const idx = executing.indexOf(e); if (idx > -1) executing.splice(idx, 1); }).catch(() => { const idx = executing.indexOf(e); if (idx > -1) executing.splice(idx, 1); });
+    const e = p.then(() => {
+      const idx = executing.indexOf(e);
+      if (idx > -1) executing.splice(idx, 1);
+    }).catch(() => {
+      const idx = executing.indexOf(e);
+      if (idx > -1) executing.splice(idx, 1);
+    });
     executing.push(e);
     let r = Promise.resolve();
     if (executing.length >= poolLimit) r = Promise.race(executing);
@@ -298,10 +351,16 @@ function convertSingleFile(filePath) {
     let arr = null;
     if (Array.isArray(parsed)) arr = parsed;
     else if (parsed && Array.isArray(parsed.cards)) arr = parsed.cards;
-    else { console.log(`  - Skipping ${filePath}: not an array and does not contain .cards array.`); return { skipped: true }; }
+    else {
+      console.log(`  - Skipping ${filePath}: not an array and does not contain .cards array.`);
+      return { skipped: true };
+    }
 
     const someLegacy = arr.some(looksLikeLegacyEntry);
-    if (!someLegacy) { console.log(`  - Skipping ${filePath}: already looks converted.`); return { skipped: true }; }
+    if (!someLegacy) {
+      console.log(`  - Skipping ${filePath}: already looks converted.`);
+      return { skipped: true };
+    }
 
     const out = [];
     for (let i = 0; i < arr.length; i++) {
@@ -310,14 +369,19 @@ function convertSingleFile(filePath) {
         const originalId = item.id || null;
         const t = transformDetails(item, originalId);
         if (t) out.push(t);
-        else { console.warn(`    ✖ Item ${i} transform returned null -> skipping`); }
-      } else out.push(item);
+        else {
+          console.warn(`    ✖ Item ${i} transform returned null -> skipping`);
+        }
+      } else {
+        out.push(item);
+      }
     }
 
     console.log(`  - Converting ${filePath} (${out.length}/${arr.length} items).`);
+
     const gz = gzipJson(out);
-    if (!DRY_RUN) fs.writeFileSync(filePath, gz);
-    console.log(`    ✅ Converted and ${DRY_RUN ? '[dry-run] would overwrite' : 'overwritten'} (no backup).`);
+    fs.writeFileSync(filePath, gz);
+    console.log(`    ✅ Converted and overwritten (no backup).`);
     return { converted: true };
   } catch (err) {
     console.error(`    💥 Error converting ${filePath}:`, err && err.stack ? err.stack : err);
@@ -331,13 +395,17 @@ function convertSingleFile(filePath) {
 async function main() {
   try {
     console.log("📦 Loading baza.json.gz...");
-    if (!fs.existsSync(BASE_PATH)) { console.error(`Brak pliku bazowego: ${BASE_PATH}. Upewnij się, że uruchomiłeś fetch-baza.js.`); process.exit(1); }
+    if (!fs.existsSync(BASE_PATH)) {
+      console.error(`Brak pliku bazowego: ${BASE_PATH}. Upewnij się, że uruchomiłeś fetch-baza.js.`);
+      process.exit(1);
+    }
     const gzBuf = fs.readFileSync(BASE_PATH);
     const jsonBuf = zlib.gunzipSync(gzBuf);
     const baseCards = JSON.parse(jsonBuf.toString("utf8"));
-    if (!Array.isArray(baseCards)) throw new Error("Invalid base response format (expected array)");
+    if (!Array.isArray(baseCards)) {
+      throw new Error("Invalid base response format (expected array)");
+    }
     console.log(`🔧 Building dated western file from ${baseCards.length} base entries...`);
-
     const ids = baseCards.map(b => b.id);
     let processed = 0;
     const results = await asyncPool(CONCURRENCY, ids, async (id) => {
@@ -351,11 +419,14 @@ async function main() {
     });
     const western = results.filter(Boolean);
     console.log(`✅ DONE – collected ${western.length} simplified card entries. Now saving dated file...`);
+    try {
+      saveDatedWesternFile(western);
+    } catch (err) {
+      console.error("⚠️ Failed to save dated EN file:", err);
+    }
 
-    try { saveDatedWesternFile(western); } catch (err) { console.error("⚠️ Failed to save dated EN file:", err); }
-
-    // === MIGRATE ALL EXISTING FILES into en/<YEAR>/ (no renames) ===
-    migrateAllToYearFolders_NoRename();
+    // === MIGRATE ALL EXISTING FILES into en/<YEAR>/ (no numeric subfolders) ===
+    migrateAllToYearFolders();
 
     // === AUTOMATIC: convert existing files under en/*/*.json.gz ===
     console.log('\n🔁 Automatic conversion: scanning all existing en/*/*.json.gz files...');
@@ -364,7 +435,11 @@ async function main() {
 
     for (const filePath of files) {
       console.log('➡️', filePath);
-      try { convertSingleFile(filePath); } catch (e) { console.error('  💥 Error during convertSingleFile:', e && e.stack ? e.stack : e); }
+      try {
+        convertSingleFile(filePath);
+      } catch (e) {
+        console.error('  💥 Error during convertSingleFile:', e && e.stack ? e.stack : e);
+      }
     }
 
     console.log('\nConversion pass finished.');
