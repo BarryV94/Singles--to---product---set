@@ -1,7 +1,6 @@
 name: TCGdex Daily Sync
 
 on:
-  schedule:
   workflow_dispatch: { }
 
 permissions:
